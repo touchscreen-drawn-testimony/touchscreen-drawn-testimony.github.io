@@ -34,6 +34,9 @@ const pathStoryMapping = {
   writing_Image_copy: "documentation",
 } as Record<string, string>;
 
+const strokeBlinkIntervalMs = 5000;
+const strokeBlinkStaggerMs = 150;
+
 export function getSvgDimensionsFromString(svgString: string) {
   const readAttr = (name: string) => {
     const regex = new RegExp(`${name}\\s*=\\s*"([^"]+)"`);
@@ -67,13 +70,14 @@ export interface PaintingProps {
   svgFile: string;
   inactive?: boolean;
   discoveredStoryKeys?: Array<string>;
+  missingSvgPath?: string;
 }
 
 export default function Painting(props: PaintingProps) {
   const { svgFile, inactive = false } = props;
 
   if (svgFile == null) {
-    return <div>No SVG path.</div>;
+    return <div>{props.missingSvgPath ?? "No SVG path was provided."}</div>;
   }
 
   const dispatch = useDispatch();
@@ -91,6 +95,7 @@ export default function Painting(props: PaintingProps) {
   console.log("MySVG", MySVG); */
 
   const svgRef = useRef(null);
+  const blinkTimeoutIdsRef = useRef<number[]>([]);
   const [loaded, setLoaded] = useState<boolean>(false);
   // const paintingContext = useContext(PaintingContext);
   // const [paintingSizeByWidth, setPaintingSizeByWidth] =
@@ -170,8 +175,22 @@ export default function Painting(props: PaintingProps) {
     });
   }; */
 
-  const blinkStrokes = () => {
-    const elems = document.querySelectorAll(".myPath");
+  const clearBlinkTimeouts = useCallback(() => {
+    blinkTimeoutIdsRef.current.forEach((timeoutId) => {
+      window.clearTimeout(timeoutId);
+    });
+    blinkTimeoutIdsRef.current = [];
+  }, []);
+
+  const blinkStrokes = useCallback(() => {
+    clearBlinkTimeouts();
+
+    const wrapper = svgRef.current as HTMLElement | null;
+    if (wrapper == null) {
+      return;
+    }
+
+    const elems = wrapper.querySelectorAll<SVGGraphicsElement>(".myPath");
     /*  console.log(
       Array.from(elems).sort((a, b) => {
         return (
@@ -181,20 +200,27 @@ export default function Painting(props: PaintingProps) {
       })
     ); */
 
-    Array.from(elems)
-      .sort((a, b) => {
-        return (
-          (a as HTMLElement).getBoundingClientRect().x -
-          (b as HTMLElement).getBoundingClientRect().x
-        );
-      })
-      .forEach((el, index) => {
-        (el as HTMLElement).classList.remove("fade-stroke-animation");
-        setTimeout(function () {
-          (el as HTMLElement).classList.add("fade-stroke-animation");
-        }, index * 150);
-      });
-  };
+    const sortedElements = Array.from(elems).sort((a, b) => {
+      return a.getBoundingClientRect().x - b.getBoundingClientRect().x;
+    });
+
+    sortedElements.forEach((element) => {
+      element.classList.remove("fade-stroke-animation");
+    });
+
+    // Commit the removals before the first element is re-added at 0 ms.
+    // Otherwise browsers can batch both class changes and skip its animation.
+    void wrapper.getBoundingClientRect();
+
+    sortedElements.forEach((el, index) => {
+      const timeoutId = window.setTimeout(() => {
+        if (el.isConnected) {
+          el.classList.add("fade-stroke-animation");
+        }
+      }, index * strokeBlinkStaggerMs);
+      blinkTimeoutIdsRef.current.push(timeoutId);
+    });
+  }, [clearBlinkTimeouts]);
 
   const animateViewBox = (
     svg: SVGSVGElement,
@@ -453,6 +479,25 @@ export default function Painting(props: PaintingProps) {
     if (svgRef.current != null) {
       setHiddenImages(svgRef.current as SVGSVGElement, true);
 
+      if (inactive !== true) {
+        const groups = (svgRef.current as SVGSVGElement).querySelectorAll("g");
+        groups.forEach((element) => {
+          console.log(element, element.id);
+
+          if (element.id.includes("_group")) {
+            const images = (element as SVGSVGElement).querySelectorAll("image");
+            const paths = (element as SVGSVGElement).querySelectorAll("path");
+            console.log(paths);
+
+            if (paths) {
+              images.forEach((img) => {
+                img.classList.add("myimage");
+              });
+            }
+          }
+        });
+      }
+
       const paths = (svgRef.current as SVGSVGElement).querySelectorAll("path");
       paths.forEach((element) => {
         if (!element.id) {
@@ -468,6 +513,34 @@ export default function Painting(props: PaintingProps) {
       resetView();
     }
   }, [svgRef.current, loaded]);
+
+  useEffect(() => {
+    if (
+      !loaded ||
+      inactive ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    blinkStrokes();
+    const intervalId = window.setInterval(
+      blinkStrokes,
+      strokeBlinkIntervalMs
+    );
+
+    return () => {
+      window.clearInterval(intervalId);
+      clearBlinkTimeouts();
+
+      const wrapper = svgRef.current as HTMLElement | null;
+      wrapper
+        ?.querySelectorAll(".fade-stroke-animation")
+        .forEach((element) =>
+          element.classList.remove("fade-stroke-animation")
+        );
+    };
+  }, [blinkStrokes, clearBlinkTimeouts, inactive, loaded]);
 
   const selectedGroup = useSelector((state: State) => state.app.selectedGroup);
 
