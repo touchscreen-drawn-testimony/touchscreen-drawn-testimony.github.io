@@ -28,7 +28,7 @@ export function Navbar({
 }: NavbarProps): JSX.Element {
   const ui = messages[language].navbar;
   const itemClassName =
-    "relative flex min-w-16 items-center justify-center px-2 text-sm font-medium transition-colors focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gray-500 sm:min-w-20 sm:px-4";
+    "navbar-view-button relative flex min-w-16 items-center justify-center px-2 text-sm font-medium transition-colors focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gray-500 sm:min-w-20 sm:px-4";
 
   return (
     <nav

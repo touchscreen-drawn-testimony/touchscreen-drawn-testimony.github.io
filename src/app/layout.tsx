@@ -25,7 +25,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="grid min-h-screen h-screen max-h-screen w-screen max-w-screen overflow-hidden myText text-gray-950">
+      <body className="grid overflow-hidden myText text-gray-950">
         {children}
       </body>
     </html>
