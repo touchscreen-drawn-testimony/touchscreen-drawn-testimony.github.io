@@ -37,7 +37,7 @@ export function Navbar({
     >
       <Link
         aria-label={ui.returnToBeginning}
-        className="relative mr-2 w-18 shrink-0 sm:w-24"
+        className="navbar-logo relative mr-2 w-18 shrink-0 sm:w-24"
         href="/"
         onClick={onLogoClick}
       >

@@ -346,8 +346,8 @@ function MainMenu() {
         onViewChange={setDataView}
       />
 
-      <div className="relative grid size-full min-h-0 grid-rows-1 grid-cols-[70%_30%] items-center justify-center">
-        <div className="size-full" data-tutorial="painting">
+      <div className="painting-content relative grid size-full min-h-0 grid-rows-1 grid-cols-[70%_30%] items-center justify-center">
+        <div className="painting-stage size-full" data-tutorial="painting">
           {
             <Painting
               key={painting.key}
@@ -359,11 +359,11 @@ function MainMenu() {
           }
         </div>
 
-        <div className="size-full relative" data-tutorial="story">
+        <div className="painting-story size-full relative" data-tutorial="story">
           <div className="size-full absolute top-0 left-0">
             {storyData != null && (
               <div className={`size-full opacity-80 text-gray-950 relative transition-all ${dataView ? 'bg-gray-300 border-l border-gray-400' : ''}`}>
-                <div className="absolute top-0 left-0 size-full overflow-hidden overflow-y-scroll flex items-center">
+                <div className="painting-story-scroll absolute top-0 left-0 size-full overflow-hidden overflow-y-scroll flex items-center">
                   <div
                     key={`${language}-${selectedStoryKey}-${dataView ? "data" : "story"}`}
                     className="w-full max-h-full flex gap-2 flex-col p-3 px-6 story-sequence"
@@ -377,7 +377,7 @@ function MainMenu() {
         </div>
       </div>
 
-      <div className="size-full" data-tutorial="timeline">
+      <div className="painting-timeline-area size-full" data-tutorial="timeline">
         {storyData && (
           <PaintingTimeline
             paintings={paintings}

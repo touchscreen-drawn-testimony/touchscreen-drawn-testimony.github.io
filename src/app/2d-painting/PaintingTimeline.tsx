@@ -132,7 +132,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
   }, [svgRef.current]);
 
   return (
-    <div className="size-full items-center grid grid-cols-[64px_auto_64px] gap-2 border-t border-gray-300 relative">
+    <div className="timeline-shell size-full items-center grid grid-cols-[64px_auto_64px] gap-2 border-t border-gray-300 relative">
       {canNavigatePrevious && (
         <button
           type="button"
@@ -143,15 +143,16 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
           <ChevronLeftIcon className="size-7" />
         </button>
       )}
-      <div
-        className="w-full grid items-center painting-timeline grid-rows-[auto_auto_auto] relative col-start-2"
-        style={{
-          gridTemplateColumns: `repeat(${Math.max(
-            1,
-            paintings.length
-          )}, minmax(0, 1fr))`,
-        }}
-      >
+      <div className="timeline-scroll col-start-2">
+        <div
+          className="w-full grid items-center painting-timeline grid-rows-[auto_auto_auto] relative"
+          style={{
+            gridTemplateColumns: `repeat(${Math.max(
+              1,
+              paintings.length
+            )}, minmax(0, 1fr))`,
+          }}
+        >
         {paintings.map((e, i) => {
           const story = storyData ? storyData[e.key] ?? null : null;
           const paintingDiscovered = discoveredStoryKeys.includes(e.key);
@@ -221,7 +222,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
                           };
                         });
 
-                        return code.replaceAll('id="', `id="timeline-${i}`);
+                        return code.replace(/id="/g, `id="timeline-${i}`);
                       }}
                     />
                   </div>
@@ -246,6 +247,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
             </Fragment>
           );
         })}
+      </div>
       </div>
       <div className="col-start-3 row-start-1 z-10 flex size-full flex-col items-center justify-center gap-1">
         {canNavigateNext && (

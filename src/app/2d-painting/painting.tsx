@@ -34,7 +34,6 @@ const pathStoryMapping = {
   writing_Image_copy: "documentation",
 } as Record<string, string>;
 
-const strokeBlinkIntervalMs = 5000;
 const strokeBlinkStaggerMs = 150;
 
 export function getSvgDimensionsFromString(svgString: string) {
@@ -212,7 +211,7 @@ export default function Painting(props: PaintingProps) {
     // Otherwise browsers can batch both class changes and skip its animation.
     void wrapper.getBoundingClientRect();
 
-    sortedElements.forEach((el, index) => {
+    sortedElements.slice(0, 8).forEach((el, index) => {
       const timeoutId = window.setTimeout(() => {
         if (el.isConnected) {
           el.classList.add("fade-stroke-animation");
@@ -420,61 +419,6 @@ export default function Painting(props: PaintingProps) {
   //   }
   // }, [svgRef.current]);
 
-  const [svgWrapperSize, setSvgWrapperSize] = useState<DOMRectReadOnly | null>(
-    null
-  );
-
-  useEffect(() => {
-    if (!svgRef.current) return;
-    const resizeObserver = new ResizeObserver((nodes) => {
-      // Do what you want to do when the size of the element changes
-      setSvgWrapperSize(
-        nodes[0]?.contentRect ??
-        (nodes[0].target as HTMLElement)?.getBoundingClientRect() ??
-        null
-      );
-    });
-    resizeObserver.observe(svgRef.current);
-    return () => resizeObserver.disconnect(); // clean up
-  }, []);
-
-  useEffect(() => {
-    if (svgWrapperSize != null) {
-      const svg = (svgRef.current as HTMLElement | null)?.querySelector(
-        "svg"
-      ) as SVGSVGElement | null;
-      if (svg != null) {
-        (svg as SVGSVGElement).setAttribute(
-          "orig-viewbox",
-          `0 0 ${svgWrapperSize.width} ${svgWrapperSize.height}`
-        );
-
-        (svg as SVGSVGElement).setAttribute(
-          "width",
-          svgWrapperSize.width.toString()
-        );
-        (svg as SVGSVGElement).setAttribute(
-          "height",
-          svgWrapperSize.height.toString()
-        );
-      }
-
-      // const paperRect = document.getElementById("paper-rect");
-      // if (paperRect) {
-      //   (paperRect as SVGSVGElement).setAttribute("x", -svgWrapperSize.width);
-      //   (paperRect as SVGSVGElement).setAttribute("y", -svgWrapperSize.height);
-      //   (paperRect as SVGSVGElement).setAttribute(
-      //     "width",
-      //     svgWrapperSize.width * 2
-      //   );
-      //   (paperRect as SVGSVGElement).setAttribute(
-      //     "height",
-      //     svgWrapperSize.height * 2
-      //   );
-      // }
-    }
-  }, [svgWrapperSize]);
-
   useEffect(() => {
     if (svgRef.current != null) {
       setHiddenImages(svgRef.current as SVGSVGElement, true);
@@ -524,13 +468,7 @@ export default function Painting(props: PaintingProps) {
     }
 
     blinkStrokes();
-    const intervalId = window.setInterval(
-      blinkStrokes,
-      strokeBlinkIntervalMs
-    );
-
     return () => {
-      window.clearInterval(intervalId);
       clearBlinkTimeouts();
 
       const wrapper = svgRef.current as HTMLElement | null;
@@ -577,7 +515,7 @@ export default function Painting(props: PaintingProps) {
               setLoaded(true);
             }}
             src={svgFile}
-            className="size-full object-contain absolute"
+            className="painting-svg size-full object-contain absolute"
             preProcessor={(code) => {
               const svgSize = getSvgDimensionsFromString(code);
               code = code.replace(
