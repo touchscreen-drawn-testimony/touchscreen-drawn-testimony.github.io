@@ -10,7 +10,7 @@ import Painting from "./2d-painting/painting";
 import { PaintingTimeline } from "./2d-painting/PaintingTimeline";
 import { getSteenPortrait, PaintingAudio } from "./2d-painting/PaintingAudio";
 import { PaintingMap } from "./map/PaintingMap";
-import { CursorArrowRaysIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import { TutorialOverlay } from "./TutorialOverlay";
 
 const reenie_beanie = Reenie_Beanie({ weight: "400", subsets: ["latin"] });
@@ -151,6 +151,54 @@ export interface StoryEntry {
   shorttitle?: string;
 }
 
+function StartScreen({
+  language,
+  onLanguageChange,
+  onBegin,
+}: {
+  language: Language;
+  onLanguageChange: (language: Language) => void;
+  onBegin: () => void;
+}) {
+  const ui = messages[language].startScreen;
+
+  return (
+    <section className="start-screen bg-white" aria-labelledby="start-screen-title">
+      <div className="start-screen-art cursor-pointer" aria-hidden="true" onClick={onBegin}>
+        <img src="/images/Title page-1.svg" alt="" />
+      </div>
+
+      <div className="start-screen-language" aria-label={ui.language} role="group">
+        {(["en", "da"] as const).map((locale) => (
+          <button
+            key={locale}
+            type="button"
+            aria-pressed={language === locale}
+            onClick={() => onLanguageChange(locale)}
+          >
+            {locale === "en" ? "English" : "Dansk"}
+          </button>
+        ))}
+      </div>
+
+      <div className="start-screen-content cursor-pointer" onClick={onBegin}>
+        <p className="start-screen-eyebrow">{ui.eyebrow}</p>
+        <h1 id="start-screen-title" className={noto_serif.className}>
+          {ui.title.split("\n").map((line) => (
+            <span key={line}>{line}</span>
+          ))}
+        </h1>
+        <p className={`start-screen-subtitle ${reenie_beanie.className}`}>
+          {ui.subtitle}
+        </p>
+        <p className="start-screen-invitation">{ui.invitation}</p>
+
+        <p className="mt-8 text-2xl text-gray-600">{ui.begin}</p>
+      </div>
+    </section>
+  );
+}
+
 function MainMenu() {
   const mode = useSelector((state: State) => state.app.mode);
   const dispatch = useDispatch();
@@ -170,6 +218,7 @@ function MainMenu() {
   const [focusData, setFocusData] = useState<any>(null);
   const [discoveredStoryKeys, setDiscoveredStoryKeys] = useState<Array<string>>([]);
   const [tutorialOpen, setTutorialOpen] = useState(false);
+  const [startScreenOpen, setStartScreenOpen] = useState(true);
 
   useEffect(() => {
     Promise.all(
@@ -306,7 +355,6 @@ function MainMenu() {
               <PaintingAudio src={`/audio/${story.audio}`} />
             }
           </div>
-          {!dataView && story.data != null && viewToggle}
           {
             story.map && <div className="text-sm flex gap-1 flex-col z-0 story-media-reveal">
               <div className="h-[300px] w-full border-2 border-gray-300 rounded-md opacity-90">
@@ -322,6 +370,13 @@ function MainMenu() {
               </div>
             </div>
           }
+          {painting.inactive !== true && !selectedGroup &&
+            <div className="mt-7 w-full flex justify-center">
+              <div className="text-base flex flex-row items-center gap-1 content-reveal">
+                <div><CursorArrowRaysIcon className="size-7 animate-pulse" /></div>
+                <span className="italic text-gray-600">{ui.story.interactionPrompt}</span>
+              </div>
+            </div>}
         </>}
     </>
   }, [ui])
@@ -353,7 +408,10 @@ function MainMenu() {
         language={language}
         tutorialOpen={tutorialOpen}
         onLanguageChange={(nextLanguage) => dispatch(setLanguage(nextLanguage))}
-        onLogoClick={() => dispatch(setSelectedPainting(0))}
+        onLogoClick={() => {
+          dispatch(setSelectedPainting(0));
+          setStartScreenOpen(true);
+        }}
         onOpenTutorial={() => setTutorialOpen(true)}
       />
 
@@ -368,13 +426,6 @@ function MainMenu() {
                 discoveredStoryKeys={discoveredStoryKeys}
                 missingSvgPath={ui.story.missingSvgPath}
               />
-              {painting.inactive !== true && !selectedGroup &&
-                <div className="absolute top-1 w-full flex justify-center">
-                  <div className="text-base flex flex-row items-center gap-1 content-reveal">
-                    <div><CursorArrowRaysIcon className="size-7 animate-pulse" /></div>
-                    <span className="italic text-gray-600">{ui.story.interactionPrompt}</span>
-                  </div>
-                </div>}
             </>
           }
         </div>
@@ -388,7 +439,7 @@ function MainMenu() {
                     key={`${language}-${selectedStoryKey}-${dataView ? "data" : "story"}`}
                     className="w-full max-h-full flex gap-2 flex-col p-3 px-6 story-sequence"
                   >
-                    {dataView && viewToggle}
+                    {viewToggle}
                     {renderContent(story, dataView, painting.inactive, selectedGroup)}
                   </div>
                 </div>
@@ -420,6 +471,16 @@ function MainMenu() {
         open={tutorialOpen}
         onClose={() => setTutorialOpen(false)}
       />
+      {startScreenOpen && (
+        <StartScreen
+          language={language}
+          onLanguageChange={(nextLanguage) => dispatch(setLanguage(nextLanguage))}
+          onBegin={() => {
+            dispatch(setMode("explore"));
+            setStartScreenOpen(false);
+          }}
+        />
+      )}
       <div className="painting-paper-overlay absolute inset-0 pointer-events-none z-[1050]" />
     </div>
   );

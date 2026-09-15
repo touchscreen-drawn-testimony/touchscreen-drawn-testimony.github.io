@@ -7,6 +7,14 @@ export interface TutorialMessage {
 }
 
 interface UiMessages {
+  startScreen: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    invitation: string;
+    begin: string;
+    language: string;
+  };
   navbar: {
     primaryNavigation: string;
     returnToBeginning: string;
@@ -59,6 +67,15 @@ interface UiMessages {
 
 export const messages: Record<Language, UiMessages> = {
   en: {
+    startScreen: {
+      eyebrow: "An Interactive Visual Testimony",
+      title: "A Danish Boy\nin Theresienstadt",
+      subtitle: "A Drawn Testimony",
+      invitation:
+        "Follow Steen Metz's memories through drawings, testimony, and archival evidence.",
+      begin: "Touch to begin",
+      language: "Choose language",
+    },
     navbar: {
       primaryNavigation: "Primary navigation",
       returnToBeginning: "Return to the beginning",
@@ -136,6 +153,15 @@ export const messages: Record<Language, UiMessages> = {
     },
   },
   da: {
+    startScreen: {
+      eyebrow: "Et interaktivt visuelt vidnesbyrd",
+      title: "En dansk dreng\ni Theresienstadt",
+      subtitle: "Et tegnet vidnesbyrd",
+      invitation:
+        "Følg Steen Metz' erindringer gennem tegninger, vidnesbyrd og historisk kildemateriale.",
+      begin: "Tryk for at begynde",
+      language: "Vælg sprog",
+    },
     navbar: {
       primaryNavigation: "Primær navigation",
       returnToBeginning: "Gå tilbage til begyndelsen",

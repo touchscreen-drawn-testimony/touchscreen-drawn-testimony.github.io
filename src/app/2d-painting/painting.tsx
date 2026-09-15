@@ -34,6 +34,7 @@ const pathStoryMapping = {
   writing_Image_copy: "documentation",
 } as Record<string, string>;
 
+const strokeBlinkIntervalMs = 5000;
 const strokeBlinkStaggerMs = 150;
 
 export function getSvgDimensionsFromString(svgString: string) {
@@ -464,7 +465,13 @@ export default function Painting(props: PaintingProps) {
     }
 
     blinkStrokes();
+    const intervalId = window.setInterval(
+      blinkStrokes,
+      strokeBlinkIntervalMs
+    );
+
     return () => {
+      window.clearInterval(intervalId);
       clearBlinkTimeouts();
 
       const wrapper = svgRef.current as HTMLElement | null;
