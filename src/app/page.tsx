@@ -301,16 +301,12 @@ function MainMenu() {
               ? renderStoryText(story.text)
               : ui.story.missingText}
           </div>
-          {inactive !== true && !selectedGroup &&
-            <div className="text-base flex flex-row items-center gap-1 content-reveal">
-              <span>{ui.story.interactionPrompt}</span>
-              <div><CursorArrowRaysIcon className="size-7 animate-pulse" /></div>
-            </div>}
           <div className="text-base flex gap-1 flex-col story-media-reveal">
             {story.audio &&
               <PaintingAudio src={`/audio/${story.audio}`} />
             }
           </div>
+          {!dataView && story.data != null && viewToggle}
           {
             story.map && <div className="text-sm flex gap-1 flex-col z-0 story-media-reveal">
               <div className="h-[300px] w-full border-2 border-gray-300 rounded-md opacity-90">
@@ -330,6 +326,22 @@ function MainMenu() {
     </>
   }, [ui])
 
+  const viewToggle = (
+    <div className="flex justify-end" data-tutorial="data">
+      <button
+        type="button"
+        className="cursor-pointer rounded-md border border-gray-400 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 disabled:cursor-not-allowed disabled:text-gray-300"
+        title={!dataView && story.data == null ? ui.navbar.dataUnavailable : undefined}
+        onClick={(event) => {
+          event.stopPropagation();
+          setDataView((currentView) => !currentView);
+        }}
+      >
+        {dataView ? ui.story.seeStory : ui.story.seeEvidenceResources}
+      </button>
+    </div>
+  );
+
   return (
     <div
       className="grid grid-cols-1 grid-rows-[auto_minmax(0,1fr)_auto] overflow-hidden size-full painting-main"
@@ -338,26 +350,32 @@ function MainMenu() {
       }}
     >
       <Navbar
-        dataAvailable={story.data != null}
-        dataView={dataView}
         language={language}
         tutorialOpen={tutorialOpen}
         onLanguageChange={(nextLanguage) => dispatch(setLanguage(nextLanguage))}
         onLogoClick={() => dispatch(setSelectedPainting(0))}
         onOpenTutorial={() => setTutorialOpen(true)}
-        onViewChange={setDataView}
       />
 
       <div className="relative grid size-full min-h-0 grid-rows-1 grid-cols-[70%_30%] items-center justify-center">
-        <div className="size-full" data-tutorial="painting">
+        <div className="size-full relative" data-tutorial="painting">
           {
-            <Painting
-              key={painting.key}
-              svgFile={painting.svgFile}
-              inactive={painting.inactive}
-              discoveredStoryKeys={discoveredStoryKeys}
-              missingSvgPath={ui.story.missingSvgPath}
-            />
+            <>
+              <Painting
+                key={painting.key}
+                svgFile={painting.svgFile}
+                inactive={painting.inactive}
+                discoveredStoryKeys={discoveredStoryKeys}
+                missingSvgPath={ui.story.missingSvgPath}
+              />
+              {painting.inactive !== true && !selectedGroup &&
+                <div className="absolute top-1 w-full flex justify-center">
+                  <div className="text-base flex flex-row items-center gap-1 content-reveal">
+                    <div><CursorArrowRaysIcon className="size-7 animate-pulse" /></div>
+                    <span className="italic text-gray-600">{ui.story.interactionPrompt}</span>
+                  </div>
+                </div>}
+            </>
           }
         </div>
 
@@ -370,6 +388,7 @@ function MainMenu() {
                     key={`${language}-${selectedStoryKey}-${dataView ? "data" : "story"}`}
                     className="w-full max-h-full flex gap-2 flex-col p-3 px-6 story-sequence"
                   >
+                    {dataView && viewToggle}
                     {renderContent(story, dataView, painting.inactive, selectedGroup)}
                   </div>
                 </div>

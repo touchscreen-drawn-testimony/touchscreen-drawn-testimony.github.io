@@ -29,6 +29,8 @@ interface UiMessages {
     missingTime: string;
     missingSvgPath: string;
     interactionPrompt: string;
+    seeEvidenceResources: string;
+    seeStory: string;
   };
   tutorial: {
     steps: TutorialMessage[];
@@ -79,7 +81,9 @@ export const messages: Record<Language, UiMessages> = {
       missingTime: "Please add time.",
       missingSvgPath: "No SVG path was provided.",
       interactionPrompt:
-        "Click on the interactive objects in the drawing to find out more.",
+        "Click on the interactive objects in the drawing for details.",
+      seeEvidenceResources: "See Evidence resources",
+      seeStory: "See Story",
     },
     tutorial: {
       steps: [
@@ -155,6 +159,8 @@ export const messages: Record<Language, UiMessages> = {
       missingSvgPath: "Der er ikke angivet en sti til SVG-filen.",
       interactionPrompt:
         "Klik på de interaktive objekter i tegningen for at få mere at vide.",
+      seeEvidenceResources: "Se kildemateriale",
+      seeStory: "Se fortællingen",
     },
     tutorial: {
       steps: [

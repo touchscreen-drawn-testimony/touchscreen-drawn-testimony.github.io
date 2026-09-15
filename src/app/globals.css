@@ -33,7 +33,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-    /* background-image: url(/assets/paper-texture.jpg); */
+  /* background-image: url(/assets/paper-texture.jpg); */
 }
 
 * {
@@ -60,7 +60,10 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.8);
   display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
+  font-family:
+    Futura,
+    Helvetica Neue,
+    sans-serif;
   font-size: 12px;
   font-weight: 700;
   max-width: 128px;
@@ -160,7 +163,7 @@ input:checked + .slider:before {
 }
 
 .painting-main {
-    background: #ffffff;
+  background: #ffffff;
 }
 
 /* The artwork files declare large intrinsic pixel sizes. Keep inline SVGs
@@ -316,7 +319,7 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
   background-size: cover;
   mix-blend-mode: multiply;
-  opacity: 0.35;
+  opacity: 0.25;
   transform: translateZ(0);
   filter: brightness(1.2);
 }
@@ -390,7 +393,7 @@ input:checked + .slider:before {
   right: 0;
   bottom: 0;
   left: 0;
-  width :30px;
+  width: 30px;
   height: 30px;
 }
 .mousey {
@@ -409,30 +412,40 @@ input:checked + .slider:before {
   background-color: #fff;
   animation-name: scroll;
   animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
   animation-iteration-count: infinite;
 }
 @keyframes scroll {
-  0% { opacity: 0; }
-  10% { transform: translateY(0); opacity: 1; }
-  70% {  opacity: 1; }
-  100% { transform: translateY(8px); opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
 }
 
 @keyframes myping {
-    0%,
-    100% {
-      transform: rotate(-10deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
+  0%,
+  100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
 }
 
 .animate-myping {
   animation-name: myping;
   animation-duration: 3s;
-  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
   animation-iteration-count: infinite;
 }
 
@@ -448,14 +461,14 @@ input:checked + .slider:before {
 
 .myPath:hover,
 .selected .myPath,
-.discovered .myPath { 
+.discovered .myPath {
   stroke: rgb(0, 0, 0);
   stroke-width: 2px;
   stroke-opacity: 50%;
   fill: rgba(238, 238, 238, 0.1);
   cursor: pointer;
-  -webkit-filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
+  -webkit-filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
 }
 
 .myPath {
@@ -465,23 +478,23 @@ input:checked + .slider:before {
 }
 
 .selected image {
-  -webkit-filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
+  -webkit-filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
 }
 
-.myimage { 
-    -webkit-filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .5));
-    filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .5));
+.myimage {
+  -webkit-filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.5));
 }
 
 .shadowless {
-    -webkit-filter: none !important;
-    filter: none !important;
-  }
+  -webkit-filter: none !important;
+  filter: none !important;
+}
 
 .shadow {
-  -webkit-filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
-  filter: drop-shadow( 0px 0px 70px rgba(0, 0, 0, .7));
+  -webkit-filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(0px 0px 70px rgba(0, 0, 0, 0.7));
 }
 
 .fade-stroke-animation {
