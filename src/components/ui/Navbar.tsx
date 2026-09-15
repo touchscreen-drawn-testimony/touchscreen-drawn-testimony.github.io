@@ -45,7 +45,7 @@ export function Navbar({
       </Link>
       <div
         aria-label={ui.language}
-        className="ml-auto my-2 flex overflow-hidden rounded-md border border-gray-300"
+        className="navbar-language ml-auto my-2"
         role="group"
       >
         {(["en", "da"] as const).map((locale) => (
@@ -53,11 +53,6 @@ export function Navbar({
             key={locale}
             type="button"
             aria-pressed={language === locale}
-            className={`cursor-pointer min-w-9 px-2 text-xs font-medium transition-colors focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gray-500 sm:min-w-16 sm:text-sm ${locale === "da" ? "border-l border-gray-300" : ""
-              } ${language === locale
-                ? "bg-gray-700 text-white"
-                : "bg-white text-gray-600 hover:bg-gray-100 hover:text-gray-950"
-              }`}
             onClick={(event) => {
               event.stopPropagation();
               onLanguageChange(locale);
@@ -65,7 +60,7 @@ export function Navbar({
           >
             <span className="sm:hidden">{locale.toUpperCase()}</span>
             <span className="hidden sm:inline">
-              {locale === "en" ? ui.english : ui.danish}
+              {locale === "en" ? "English" : "Dansk"}
             </span>
           </button>
         ))}
@@ -73,7 +68,7 @@ export function Navbar({
 
       <button
         type="button"
-        className="cursor-pointer ml-2 my-2 flex items-center gap-1 rounded-md border border-gray-300 px-2 text-sm text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500"
+        className="interface-pill-button navbar-tutorial-button ml-2 my-2"
         aria-label={ui.openTutorial}
         aria-expanded={tutorialOpen}
         onClick={(event) => {
@@ -82,7 +77,7 @@ export function Navbar({
         }}
       >
         <span className="hidden md:inline">{ui.tutorial}</span>
-        <QuestionMarkCircleIcon className="size-5 fill-gray-600" />
+        <QuestionMarkCircleIcon className="size-5 fill-current" />
       </button>
     </nav>
   );

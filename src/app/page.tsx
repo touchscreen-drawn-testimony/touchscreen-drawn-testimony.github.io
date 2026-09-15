@@ -385,7 +385,7 @@ function MainMenu() {
     <div className="flex justify-end" data-tutorial="data">
       <button
         type="button"
-        className="cursor-pointer rounded-md border border-gray-400 bg-white px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 disabled:cursor-not-allowed disabled:text-gray-300"
+        className="interface-pill-button story-view-button"
         title={!dataView && story.data == null ? ui.navbar.dataUnavailable : undefined}
         onClick={(event) => {
           event.stopPropagation();
@@ -481,7 +481,7 @@ function MainMenu() {
           }}
         />
       )}
-      <div className="painting-paper-overlay absolute inset-0 pointer-events-none z-[1050]" />
+      <div className="painting-paper-overlay absolute inset-0 pointer-events-none z-[9999]" />
     </div>
   );
 }

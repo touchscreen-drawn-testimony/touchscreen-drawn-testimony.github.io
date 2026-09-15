@@ -212,7 +212,7 @@ export default function Painting(props: PaintingProps) {
     // Otherwise browsers can batch both class changes and skip its animation.
     void wrapper.getBoundingClientRect();
 
-    sortedElements.slice(0, 8).forEach((el, index) => {
+    sortedElements.forEach((el, index) => {
       const timeoutId = window.setTimeout(() => {
         if (el.isConnected) {
           el.classList.add("fade-stroke-animation");
