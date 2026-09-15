@@ -439,7 +439,7 @@ function MainMenu() {
                     key={`${language}-${selectedStoryKey}-${dataView ? "data" : "story"}`}
                     className="w-full max-h-full flex gap-2 flex-col p-3 px-6 story-sequence"
                   >
-                    {viewToggle}
+                    {story.data != null && viewToggle}
                     {renderContent(story, dataView, painting.inactive, selectedGroup)}
                   </div>
                 </div>
