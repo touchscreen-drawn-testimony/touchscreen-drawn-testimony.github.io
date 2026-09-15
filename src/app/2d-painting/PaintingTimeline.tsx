@@ -33,6 +33,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
   const selectedPainting = useSelector(
     (state: State) => state.app.selectedPainting
   );
+
   const language = useSelector((state: State) => state.app.language);
   const ui = messages[language].timeline;
   const svgRef = useRef(null);
@@ -119,15 +120,6 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
       const image = (svgRef.current as HTMLElement).querySelector(
         "#background"
       );
-      // images.forEach((element) => {
-      //   if (element.id != null) {
-      //     console.log(element.id, element);
-      //   }
-      // if (inactive !== true) {
-      //   element.classList.add("myPath");
-      //   element.addEventListener("click", clickHandler);
-      // }
-      // });
     }
   }, [svgRef.current]);
 
@@ -153,101 +145,102 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
             )}, minmax(0, 1fr))`,
           }}
         >
-        {paintings.map((e, i) => {
-          const story = storyData ? storyData[e.key] ?? null : null;
-          const paintingDiscovered = discoveredStoryKeys.includes(e.key);
-          const previousPaintingDiscovered =
-            i < paintings.length - 1 && discoveredStoryKeys.includes(paintings[i + 1].key);
-          const connectingLineDiscovered =
-            paintingDiscovered && previousPaintingDiscovered;
-          let borderStyle = "border-3 border-gray-200";
+          {paintings.map((e, i) => {
+            const story = storyData ? storyData[e.key] ?? null : null;
+            const paintingDiscovered = discoveredStoryKeys.includes(e.key);
+            const previousPaintingDiscovered =
+              i < paintings.length - 1 && discoveredStoryKeys.includes(paintings[i + 1].key);
+            const connectingLineDiscovered =
+              paintingDiscovered && previousPaintingDiscovered;
+            let borderStyle = "border-3 border-gray-200";
 
-          if (paintingDiscovered) {
-            borderStyle = "border-3 border-gray-400"
-          }
-          if (selectedPainting === i && selectedGroup == null) {
-            borderStyle = "border-3 border-gray-600"
-          }
+            if (paintingDiscovered) {
+              borderStyle = "border-3 border-gray-400"
+            }
+            if (selectedPainting === i && selectedGroup == null) {
+              borderStyle = "border-3 border-gray-600"
+            }
 
-          return (
-            <Fragment key={`fragment-${e.key}`}>
-              <div
-                key={`timeline-title-${i}`}
-                className={`text-xs text-black row-start-1 py-1 ${noto_serif.className}`}
-              >
-                {story?.shorttitle != null ? story.shorttitle : story?.title}
-              </div>
-              <div
-                key={`timeline-image-${i}`}
-                className="relative items-center justify-between flex pr-5 row-start-2"
-              >
-                <div className="absolute top-0 left-0 w-full h-full flex items-center">
-                  <div
-                    className={`h-1 mt-[4px] w-full ${connectingLineDiscovered ? "bg-gray-400" : "bg-gray-200"
-                      }`}
-                  ></div>
+            return (
+              <Fragment key={`fragment-${e.key}`}>
+                <div
+                  key={`timeline-title-${i}`}
+                  className={`text-xs text-black row-start-1 py-1 ${noto_serif.className}`}
+                >
+                  {story?.shorttitle != null ? story.shorttitle : story?.title}
                 </div>
                 <div
-                  className={`safari-rounded-clip size-18 rounded-full overflow-hidden relative cursor-pointer shadow-md items-center bg-white ${borderStyle} hover:border-gray-500`}
-                  key={`timeline-entry-${i}`}
-                  onClick={() => {
-                    dispatch(setSelectedGroup(null));
-                    dispatch(setSelectedPainting(i));
-                  }}
-                  ref={svgRef}
+                  key={`timeline-image-${i}`}
+                  className="relative items-center justify-between flex pr-5 row-start-2"
                 >
-                  <div className="size-full absolute">
-                    <SVG
-                      src={e.svgFile}
-                      className="size-full object-contain"
-                      preProcessor={(code) => {
-                        const timelineKey = i.toString();
-                        const discoveredElements = Object.keys(storyData).filter(
-                          (element) => code.includes(`id="${element}"`)
-                        );
-
-                        setInteractiveElements((currentElements) => {
-                          if (
-                            sameElements(
-                              currentElements[timelineKey],
-                              discoveredElements
-                            )
-                          ) {
-                            return currentElements;
-                          }
-
-                          return {
-                            ...currentElements,
-                            [timelineKey]: discoveredElements,
-                          };
-                        });
-
-                        return code.replace(/id="/g, `id="timeline-${i}`);
-                      }}
-                    />
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center">
+                    <div
+                      className={`h-1 mt-[4px] w-full ${connectingLineDiscovered ? "bg-gray-400" : "bg-gray-200"
+                        }`}
+                    ></div>
                   </div>
+                  <div
+                    className={`safari-rounded-clip size-18 rounded-full overflow-hidden relative cursor-pointer shadow-md items-center bg-white ${borderStyle} hover:border-gray-500`}
+                    key={`timeline-entry-${i}`}
+                    onClick={() => {
+                      dispatch(setSelectedGroup(null));
+                      dispatch(setSelectedPainting(i));
+                    }}
+                    ref={svgRef}
+                  >
+                    <div className="size-full absolute">
+                      <SVG
+                        src={e.svgFile}
+                        className="size-full object-contain"
+                        preProcessor={(code) => {
+                          const timelineKey = i.toString();
+                          const discoveredElements = Object.keys(storyData).filter(
+                            (element) => code.includes(`id="${element}"`)
+                          );
+
+                          setInteractiveElements((currentElements) => {
+                            if (
+                              sameElements(
+                                currentElements[timelineKey],
+                                discoveredElements
+                              )
+                            ) {
+                              return currentElements;
+                            }
+
+                            return {
+                              ...currentElements,
+                              [timelineKey]: discoveredElements,
+                            };
+                          });
+
+                          return code.replace(/id="/g, `id="timeline-${i}`);
+                        }}
+                      />
+                    </div>
+                  </div>
+                  {selectedPainting === i &&
+                    paintings[selectedPainting].noTimelineThumbnails !== true &&
+                    interactiveElements[i.toString()] != null &&
+                    interactiveElements[i.toString()].map((ie, i) => (
+                      <ThumbnailPainting
+                        key={`timeline-thumbnail-${i}`}
+                        elementID={ie}
+                        svgFile={e.svgFile}
+                        discovered={discoveredStoryKeys.includes(ie)}
+                      />
+                    ))}
                 </div>
-                {selectedPainting === i &&
-                  interactiveElements[i.toString()] != null &&
-                  interactiveElements[i.toString()].map((ie, i) => (
-                    <ThumbnailPainting
-                      key={`timeline-thumbnail-${i}`}
-                      elementID={ie}
-                      svgFile={e.svgFile}
-                      discovered={discoveredStoryKeys.includes(ie)}
-                    />
-                  ))}
-              </div>
-              <div
-                key={`timeline-time-${i}`}
-                className={`text-xs text-black row-start-3 py-1 ${noto_serif.className}`}
-              >
-                {story?.time}
-              </div>
-            </Fragment>
-          );
-        })}
-      </div>
+                <div
+                  key={`timeline-time-${i}`}
+                  className={`text-xs text-black row-start-3 py-1 ${noto_serif.className}`}
+                >
+                  {story?.time}
+                </div>
+              </Fragment>
+            );
+          })}
+        </div>
       </div>
       <div className="col-start-3 row-start-1 z-10 flex size-full flex-col items-center justify-center gap-1">
         {canNavigateNext && (

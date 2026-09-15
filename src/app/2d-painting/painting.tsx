@@ -426,13 +426,9 @@ export default function Painting(props: PaintingProps) {
       if (inactive !== true) {
         const groups = (svgRef.current as SVGSVGElement).querySelectorAll("g");
         groups.forEach((element) => {
-          console.log(element, element.id);
-
           if (element.id.includes("_group")) {
             const images = (element as SVGSVGElement).querySelectorAll("image");
             const paths = (element as SVGSVGElement).querySelectorAll("path");
-            console.log(paths);
-
             if (paths) {
               images.forEach((img) => {
                 img.classList.add("myimage");
