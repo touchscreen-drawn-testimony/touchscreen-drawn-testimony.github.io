@@ -359,7 +359,9 @@ input:checked + .slider:before {
   font-size: 0.875rem;
   font-weight: 650;
   cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .navbar-language button:hover {
@@ -388,7 +390,11 @@ input:checked + .slider:before {
   font-weight: 650;
   cursor: pointer;
   backdrop-filter: blur(10px);
-  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .interface-pill-button:hover {
@@ -838,13 +844,13 @@ input:checked + .slider:before {
 .fade-stroke-animation {
   /* stroke: rgb(223, 164, 76);
   stroke-width: 1px; */
-  animation: fillBreathing 2s ease-in-out forwards;
+  animation: fillBreathing 2.5s ease-in-out forwards;
 }
 
 .fade-stroke-animation > path {
   /* stroke: rgb(223, 164, 76);
   stroke-width: 1px; */
-  animation: fillBreathing 2s ease-in-out forwards;
+  animation: fillBreathing 2.5s ease-in-out forwards;
 }
 
 @keyframes fillBreathing {
@@ -852,7 +858,7 @@ input:checked + .slider:before {
     fill: rgba(0, 0, 0, 0); /* White */
   }
   50% {
-    fill: rgba(196, 196, 196, 0.68); /* Transparent */
+    fill: rgba(185, 185, 185, 0.722); /* Transparent */
   }
   100% {
     fill: rgba(0, 0, 0, 0); /* White */

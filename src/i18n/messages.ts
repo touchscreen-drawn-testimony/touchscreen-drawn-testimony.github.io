@@ -154,7 +154,7 @@ export const messages: Record<Language, UiMessages> = {
   },
   da: {
     startScreen: {
-      eyebrow: "Et interaktivt visuelt vidnesbyrd",
+      eyebrow: "Et Interaktivt Visuelt Vidnesbyrd",
       title: "En dansk dreng\ni Theresienstadt",
       subtitle: "Et tegnet vidnesbyrd",
       invitation:

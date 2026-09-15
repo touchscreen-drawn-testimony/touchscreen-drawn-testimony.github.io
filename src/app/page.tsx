@@ -382,7 +382,7 @@ function MainMenu() {
   }, [ui])
 
   const viewToggle = (
-    <div className="flex justify-end" data-tutorial="data">
+    <div className="flex justify-end mb-2" data-tutorial="data">
       <button
         type="button"
         className="interface-pill-button story-view-button"

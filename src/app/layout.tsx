@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
+import { InactivityReload } from "./InactivityReload";
 
 export const metadata: Metadata = {
   title: "A Danish Boy in Theresienstadt — A Drawn Testimony",
@@ -26,6 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="grid overflow-hidden myText text-gray-950">
+        <InactivityReload />
         {children}
       </body>
     </html>
