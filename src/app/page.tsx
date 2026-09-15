@@ -32,11 +32,13 @@ const paintings = [
   { key: "hjallesevej", svgFile: "/images/3. arrest.svg" },
   { key: "transport", svgFile: "/images/Transport scene-2.svg" },
   { key: "barracks", svgFile: "/images/5. barracks.svg" },
+  { key: "food", svgFile: "/images/5. food.svg" },
   { key: "infirmary", svgFile: "/images/5.5 infirmary.svg" },
   { key: "soccer", svgFile: "/images/7. Soccer scene.svg" },
-  // { key: "modelcamp", svgFile: "/images/Model Camp scene-1.svg" },
+  { key: "modelcamp", svgFile: "/images/Model Camp scene-1.svg" },
   { key: "whitebus", svgFile: "/images/10. white buses.svg" },
   { key: "after", svgFile: "/images/11. After Theresienstadt.svg" },
+  { key: "question_answer", svgFile: "/images/12. second career.svg" },
 ];
 
 function AnimatedWords({
@@ -346,8 +348,8 @@ function MainMenu() {
         onViewChange={setDataView}
       />
 
-      <div className="painting-content relative grid size-full min-h-0 grid-rows-1 grid-cols-[70%_30%] items-center justify-center">
-        <div className="painting-stage size-full" data-tutorial="painting">
+      <div className="relative grid size-full min-h-0 grid-rows-1 grid-cols-[70%_30%] items-center justify-center">
+        <div className="size-full" data-tutorial="painting">
           {
             <Painting
               key={painting.key}
@@ -359,7 +361,7 @@ function MainMenu() {
           }
         </div>
 
-        <div className="painting-story size-full relative" data-tutorial="story">
+        <div className="size-full relative" data-tutorial="story">
           <div className="size-full absolute top-0 left-0">
             {storyData != null && (
               <div className={`size-full opacity-80 text-gray-950 relative transition-all ${dataView ? 'bg-gray-300 border-l border-gray-400' : ''}`}>

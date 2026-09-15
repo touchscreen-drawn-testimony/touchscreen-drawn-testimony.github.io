@@ -17,7 +17,7 @@
   "young": {
     "title": "Steen Metz",
     "subtitle": "An Almost Normal Life",
-    "text": "Steen and his parents lived in the Stovesberg apartment complex at Hjallesevej 98 in Odense, Denmark. Despite food rationing under the occupation, the family maintained an almost normal daily life.",
+    "text": "Steen Axel Metz was born in Odense, Denmark, to his parents, Axel Mogens Metz and Magna Metz. Despite his heritage, Steen did not know he was Jewish – they even celebrated Christmas.",
     "location": "Odense, Denmark",
     "time": "1935 - 1943",
     "audio": "almost-normal-life.mp3",
@@ -65,7 +65,7 @@
   "hjallesevej": {
     "title": "The Arrest",
     "subtitle": "Denmark under German Occupation",
-    "text": "In April 1940, the same month German forces occupied Denmark, nine-year-old Steen and his family moved into a new apartment on Hjallesevej in Odense. Life continued as normal, Steen helped the milkman with his deliveries, and in 1942 he started school. But by the time he reached third class, Steen and his parents were arrested by the Nazis and taken from their home.",
+    "text": "In April 1940, the German forces occupied Denmark. The same month, nine-year-old Steen and his family moved into a new apartment, the Stovesberg building on the Hjallesevej 98 in Odense. Despite food rationing under occupation, the family maintained an almost normal daily life for the first few years of the war. Steen helped the milkman with his deliveries, and in 1941 he started school. By the time he reached third class, Steen and his parents were arrested by the Nazis and taken from their home.",
     "location": "Odense, Denmark",
     "time": "2 October 1943",
     "data": [
@@ -102,12 +102,13 @@
     "subtitle": "The Journey to Theresienstadt",
     "text": "A group of around sixty Danish Jews, including Steen and his family, were assembled at the local school Vestre Skole before being transported to the nearby city of Kolding and later to Theresienstadt ghetto.",
     "location": "Odense, Denmark",
-    "time": "October 1943"
+    "time": "October 1943",
+    "audio": "arrest_vestreskole.mp3"
   },
   "transport": {
     "title": "Transport",
     "subtitle": "A Three-Day Journey",
-    "text": "Following their arrest, Steen and his parents were loaded aboard a cattle car and transported to Theresienstadt. The journey lasted three days, during which the car remained locked from the outside and stopped only once, when a small amount of water was provided. Among the passengers were four children, including Steen, who were able to lie down. The adults had to alternate between sitting and standing.",
+    "text": "Steen and his parents were loaded aboard a cattle car and transported to Theresienstadt Ghetto. The journey lasted three days, during which the car remained locked from the outside and stopped only once, when a small amount of water was provided. Among the passengers were four children, including Steen, who were able to lie down occasionally. The adults had to alternate between sitting and standing.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "2 October 1943",
     "map": {
@@ -146,8 +147,8 @@
     ]
   },
   "cattlecar_x5F_group": {
-    "title": "The Cattle Car",
-    "subtitle": "Transport to Theresienstadt",
+    "title": "Transport",
+    "subtitle": "The Cattle Car",
     "text": "The conditions aboard the transport were poor. Although historians commonly employ the term 'boxcar', Steen and fellow survivors consistently use the term 'cattle car', because that is what it was. The absence of any sanitary facilities produced an overwhelming smell, which Steen remembers vividly. Steen recounts the frightened faces around him, no one had any knowledge of what would happen to them.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "2 October 1943",
@@ -164,11 +165,12 @@
     ]
   },
   "roof_x5F_group": {
-    "title": "Station Bauschowitz-Theresienstadt",
-    "subtitle": "Transport to Theresienstadt",
-    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Bauschowitz-Theresienstadt, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. Upon arrival, prisoners were ordered to surrender all valuables, including jewellery and money that they had been encouraged to bring. Steen's mother was permitted to retain her wedding ring solely because it could not be removed from her finger.\n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time at Theresienstadt.",
+    "title": "Transport",
+    "subtitle": "Station Bauschowitz-Theresienstadt",
+    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Bauschowitz-Theresienstadt, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. \n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time at Theresienstadt.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "5 October 1943",
+    "audio": "transport_valuables.mp3",
     "data": [
       {
         "image": "/images/data/roof.jpg",
@@ -180,7 +182,7 @@
   "barracks": {
     "title": "Forced Labour",
     "subtitle": "Living Conditions in Theresienstadt",
-    "text": "Steen and his mother were housed in a loft, where the poor environment posed challenges throughout the year: summers brought infestations of lice and fleas, while winters were marked by extreme cold.",
+    "text": "While most deportees were separated into groups based on gender and age, Steen was permitted to remain with his mother. Steen and his mother were housed in the Hamburg barracks. The poor environment posed challenges throughout the year: summers brought infestations of lice and fleas, while winters were marked by extreme cold.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1935 - 1943",
     "data": [
@@ -193,6 +195,11 @@
         "image": "/images/data/barracks.jpg",
         "caption": "Reconstruction of Barracks.",
         "copyright": " Terezín Memorial."
+      },
+      {
+        "image": "/images/data/barracks_magdeburg.jpg",
+        "caption": "Water color painting created by Helga Wolfenstein King, created in Theresienstadt in 1945.",
+        "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19404. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
       },
       {
         "image": "/images/data/living_barracks.jpg",
@@ -230,10 +237,32 @@
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1935 - 1943"
   },
+  "food": {
+    "title": "Living Conditions in Theresienstadt",
+    "shorttitle": "Living Conditions",
+    "subtitle": "Queueing for Food",
+    "text": "During his time in Theresienstadt Ghetto, Steen and the other prisoners had to stand in long lines to receive their meal. They ate potato soup almost every day, which was little more than boiled water and potato peels. At breakfast, prisoners received a substitute for coffee and a single loaf of bread to share among the family for the entire week. Sometimes, they received a special dish of dumplings.",
+    "location": "Theresienstadt, Czechoslovakia",
+    "time": "1935 - 1943"
+  },
+  "exchangingfood_x5F_group": {
+    "title": "Living Conditions in Theresienstadt",
+    "subtitle": "Exchanging Food",
+    "text": "When Steen outgrew his shoes, there was no way to replace them. Food had become as valuable as gold, and prisoners used it to trade for things they needed. Steen’s mother exchanged food for a pair of second-hand shoes with a fellow prisoner. Around 35,000 people in the camp died as a result of malnutrition, a stark reminder of the scarcity of basic necessities.",
+    "location": "Theresienstadt, Czechoslovakia",
+    "time": "1935 - 1943"
+  },
+  "carepackages_x5F_group": {
+    "title": "Living Conditions in Theresienstadt",
+    "subtitle": "Care Packages from the Red Cross",
+    "text": "In April 1944, about six months after their arrival, Danish prisoners began receiving packages from Denmark and Sweden containing food, vitamins, and clothing. These parcels were crucial to their survival. However, guards frequently took food from the packages before they reached the prisoners. One parcel addressed to Steen’s mother arrived unusually heavy. When she opened it, the food had been removed and replaced with stones.",
+    "location": "Theresienstadt, Czechoslovakia",
+    "time": "1935 - 1943"
+  },
   "infirmary": {
     "title": "Infirmary",
     "subtitle": "Living Conditions in Theresienstadt",
-    "text": "Prior to his arrest and deportation to Theresienstadt in October 1943, Steen’s father, Axel Mogens Metz, had practised as a lawyer. In camp, he was subjected to forced labour and physical abuse.",
+    "text": "Prior to his arrest and deportation to Theresienstadt Ghetto in October 1943, Steen’s father, Axel Mogens Metz, had practised as a lawyer. In camp, he was subjected to forced labour and physical abuse.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "13 March 1944",
     "data": [
@@ -258,6 +287,11 @@
         "copyright": " Montreal Holocaust Museum. Photo: Peter Berra."
       },
       {
+        "image": "/images/data/labour_shovels.png",
+        "caption": "Oil crayon drawing by Franz Peter Kien of prisoners in Theresienstadt digging with shovels, created 1942–1944.",
+        "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19450. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
+      },
+      {
         "image": "/images/data/forcedLabour.jpg",
         "caption": "Forced Labour in Theresienstadt.",
         "copyright": " United States Holocaust Memorial Museum."
@@ -275,12 +309,12 @@
     "text": "The toll of the camp conditions caused Axel Mogens Metz to lose about fifty percent of his body weight. Although the camp infirmary’s medical staff performed their duties thoroughly, they lacked the supplies necessary to provide adequate care. On 13 March 1944, Steen’s father died of malnutrition at the age of forty; the Nazi authorities recorded the cause of death as pneumonia.\n\nIn a later interview, Steen’s mother recounted that she was required to visit seventeen separate locations before receiving confirmation of her husband’s death.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "13 March 1944",
-    "audio": "infirmary_axelmetz.mp3"
+    "audio": "infirmary_death.mp3"
   },
   "soccer": {
     "title": "Friendship",
     "subtitle": "Life in Theresienstadt",
-    "text": "Steen was only nine years old when he was held at Theresienstadt. Amid queuing for food and delivering messages in the camp, he found moments of friendship and childhood while playing soccer. In his testimony, Steen recalled that these were the only moments in which he felt closest to being a nine-year-old boy.",
+    "text": "Steen was only nine years old when he was held at Theresienstadt Ghetto. Amid queuing for food and delivering messages in the camp, he found moments of friendship and childhood while playing soccer.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1943 - 1945",
     "data": [
@@ -302,8 +336,8 @@
     ]
   },
   "ball_x5F_group": {
-    "title": "The Soccer Field",
-    "subtitle": "Playing Soccer",
+    "title": "Friendship",
+    "subtitle": "The Soccer Field",
     "text": "Steen played with a group of Czech children. In order to communicate with them, he learned Czech phonetically. The conditions in which Steen and his Czech friends played were makeshift. There was no soccer field, no designated goal post, and no proper ball; the games took place on a gravel field, and Steen's mother made a ball from old rags – one that did not last long.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1943 - 1945",
@@ -320,15 +354,15 @@
     ]
   },
   "steenmetz_x5F_group": {
-    "title": "Friendships in Theresienstadt",
-    "subtitle": "Playing Soccer",
-    "text": "Besides lining up for food and doing voluntary work, Steen played soccer with some of the Czech children in Theresienstadt. To communicate with them, he learned Czech phonetically. Steen recalls that these were the only moments where he felt closest to being a nine-year-old.",
+    "title": "Friendship",
+    "subtitle": "Moments of Childhood",
+    "text": "Besides lining up for food and doing voluntary work, Steen played soccer with some of the Czech children in Theresienstadt. Steen recalls that these were the only moments where he felt closest to being a nine-year-old.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1943 - 1945"
   },
   "friends_x5F_group": {
-    "title": "Friendships in Theresienstadt",
-    "subtitle": "Playing Soccer",
+    "title": "Friendship",
+    "subtitle": "A Sudden Loss",
     "text": "On one occasion, Steen arrived at the field to play soccer to find that his Czech friends had not come. His mother, who knew what had happened, comforted him and chose to protect him from the truth: the children had been transported to extermination camps.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1943 - 1945",
@@ -346,15 +380,41 @@
       }
     ]
   },
+  "modelcamp": {
+    "title": "Model Camp",
+    "subtitle": "The Inspection Visit",
+    "text": "In 1944, the International Committee of the Red Cross, accompanied by representatives of the Danish administration, requested access to the camp to assess the treatment of Danish Jewish prisoners. As far as Steen knows, there were no requests from other countries to see the camp. The Nazi authorities recognised the visit as a propaganda opportunity, giving Theresienstadt Ghetto the nickname ‘model camp’.",
+    "location": "Theresienstadt, Czechoslovakia",
+    "time": "February 1944 – June 1944",
+    "data": [
+      {
+        "image": null,
+        "caption": null,
+        "copyright": null
+      }
+    ]
+  },
+  "pavillion_x5F_group": {
+    "title": "Model Camp",
+    "subtitle": "The Beautification Program",
+    "text": "In preparation for the inspection, the Nazis initiated the beautification programme in the beginning of February 1944. Streets and buildings were cleaned, flower beds were laid out, and recreational spaces were constructed. To reduce the appearance of overcrowding, approximately 7,500 prisoners were deported to Auschwitz prior to the visit.\n\nThe inspection took place in the summer of 1944, lasting between four and eight hours. The visit had been carefully rehearsed in advance. Prisoners were directed to perform assigned activities, hard labour was suspended, and Danish Jews were relocated to better quarters.",
+    "location": "Theresienstadt, Czechoslovakia",
+    "time": "February – June 1944"
+  },
   "whitebus": {
     "title": "Liberation by the White Buses",
     "shorttitle": "White Buses",
     "subtitle": "Happier Times",
-    "text": "In April 1945, a few weeks before the end of the war, prisoners in Theresienstadt heard rumours that the White Buses were on their way from Sweden to liberate Scandinavian prisoners, including the Danish Jews. The Swedish Count Folke Bernadotte had negotiated for their release, cueing the start of the White Buses operation. The Danish prisoners – including Steen and his mother – were moved to the Jäger Barracks, where the White Buses arrived on April 15, 1945, to save them.",
+    "text": "A few weeks before the end of the war, prisoners in Theresienstadt heard rumours that the White Buses were on their way from Sweden to liberate Scandinavian prisoners, including the Danish Jews. The Swedish Count Folke Bernadotte had negotiated for their release, cueing the start of the White Buses operation. The Danish prisoners – including Steen and his mother – were moved to the Jäger Barracks, where the White Buses arrived on April 15, 1945, to save them.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "15 April 1945",
     "audio": "buses_liberation.mp3",
     "data": [
+      {
+        "image": "/images/data/whitebuses_jagerkaserne.jpg",
+        "caption": "The Jäger Barracks building in Theresienstadt, with Jewish women from Hungary, likely photographed during the last days before the ghetto's liberation or shortly after.",
+        "copyright": " Yad Vashem Photo Archive, catalog no. 15621, registry no. 10976/p."
+      },
       {
         "image": "/images/data/whitebussesBack.jpg",
         "caption": "White Buses on their way back through Haderslev, Denmark.",
@@ -367,7 +427,7 @@
       }
     ]
   },
-  "window_x5F_group": {
+  "bus_x5F_group": {
     "title": "Liberation by the White Buses",
     "subtitle": "The Roads through Germany",
     "text": "The White Buses rescued approximately 425 surviving Danish Jews. Before departure, some young Danish men married female prisoners from the ghetto so that they could also be liberated. Among those who left were four babies who had been born in the camp in secret. On the way back, the White Buses had to make several stops in Germany.\n\nquote(I remember looking outside while in the bus and drawing back the curtain, which I was not supposed to do. I saw some very young soldiers!)",
@@ -440,10 +500,11 @@
   },
   "after": {
     "title": "After Theresienstadt",
+    "shorttitle": "After",
     "subtitle": "The Return to Odense",
-    "text": "When Steen and his mother returned to Odense, their apartment had been rented out due to a housing shortage. Their personal belongings had been kept safe by his father's former workplace. Friends took them in and gave them a warm welcome, and in time they found an apartment in Stovesberg again. This return marked the beginning of rebuilding ordinary life after Theresienstadt.",
+    "text": "On 5 May 1945, just two weeks after their arrival in Sweden, the war ended and Denmark was liberated. The day is still celebrated in Denmark as Liberation Day, and it also happened to be Steen’s tenth birthday. Steen and his mother returned to Odense in early June. Back home, Steen joked to his school friends that they had raised the Danish flags in honour of his birthday. Coming home marked rebuilding a normal life while being confronted with what had been lost during their time in Theresienstadt. Their apartment had been rented out due to a housing shortage, but their personal belongings had been kept safe by his father's former workplace. Friends took them in and gave them a warm welcome, and, in time, they found an apartment in Stovesberg again.",
     "location": "Odense, Denmark",
-    "time": "1945 - present",
+    "time": "1945 - 2008",
     "map": {
       "title": "From Sweden to Odense with the borders of 1938.",
       "mapyear": 1938,
@@ -487,6 +548,11 @@
         "image": "/images/data/after_gymnasium.jpg",
         "caption": "Sct. Knuds Gymnasium in 1940.",
         "copyright": " H. Lykke."
+      },
+      {
+        "image": "/images/data/after_steen.jpg",
+        "caption": "Photograph of Steen",
+        "copyright": null
       }
     ]
   },
@@ -508,5 +574,82 @@
         "lon": -87.747
       }
     }
+  },
+  "question_answer": {
+    "title": "Present",
+    "subtitle": "Reflections of a Holocaust survivor",
+    "text": "In 2008, Steen started writing his book A Danish Boy in Theresienstadt. While conducting research, he returned to Theresienstadt in 2009 for the first time after more than fifty years. He published the first edition of his book in 2011 and believed that he would not do anything else, until he was invited to speak at his grandson’s middle school in Park Ridge.\n\nSince 2012, Steen has spoken to 900 groups and reached almost 135.000 people, most of them students. He has spoken in many different states in the USA and to an assortment of venues. He is amazed how many people from different institutions have contacted him, especially over the last few years. As an example, a middle school in the Midwest has completed a book about him, which will be used for education. To date, speaking about his experiences is not only his mission, but also his passion.",
+    "location": null,
+    "time": "2008 - present"
+  },
+  "forgiven_x5F_group": {
+    "title": " ",
+    "subtitle": "Have you forgiven the Nazis?",
+    "text": "I know that forgiveness is a good thing and I realize the environment in which I am answering the question, but I still cannot forgive Nazis for what they did. How could I? They were responsible for taking the lives of six million Jews, including that of my father, and millions of other lives as well.",
+    "location": null,
+    "time": null
+  },
+  "collaborators_x5F_group": {
+    "title": " ",
+    "subtitle": "Were there any Danes who collaborated with Nazis?",
+    "text": "Yes, some Danes assisted the Nazis but they were relatively few compared to other occupied countries. As an example, in Denmark the police helped Danish Jews escape to Sweden, whereas in such countries as Poland and France the police aided in the arrest of Jewish families.",
+    "location": null,
+    "time": null
+  },
+  "jewish_x5F_group": {
+    "title": " ",
+    "subtitle": "How did Nazis find out about your Jewish heritage if you weren't practicing?",
+    "text": "The Nazis had stolen registrations, including names and addresses, of all Jewish families from the Jewish offices in Copenhagen. This included my family since my father was brough up in the Jewish faith and our family was a member of the Jewish congregation.",
+    "location": null,
+    "time": null
+  },
+  "religion_x5F_group": {
+    "title": " ",
+    "subtitle": "Has your experience changed your attitude towards religion?",
+    "text": "Right after the war my mother and I probably turned away from religion since we suffered so much, including the loss of my father. I am sure I would have been raised in the Jewish faith if my father had survived the Holocaust. In the years since sharing my Holocaust experiences my identity has become more Jewish even though I do not practice the Jewish faith.",
+    "location": null,
+    "time": null
+  },
+  "lesson_x5F_group": {
+    "title": " ",
+    "subtitle": "What lesson do you want us to learn from your story?",
+    "text": "I think we can learn a number of things: You can still be succesfull even after going through some difficult times. Try to treat other people the way you want to be treated yourself. Be respectful and tolerant of other people. If you see anybody being bullied, step in; don't be a bystander like most people during the Holocaust. Be an UPSTANDER - a new word for the Webster dictionary - as opposed to a bystander. Oskar Schindler and the Danish people during the Holocaust are excellent examples of 'upstanders'.",
+    "location": null,
+    "time": null
+  },
+  "extermination_x5F_group": {
+    "title": " ",
+    "subtitle": "Why weren't you sent to an extermination camp?",
+    "text": "At that time we felt very lucky. We were in constant fear of being deported. When I did research for my book around 2008 I found out that there was an agreement between Adolf Eichmann and Werner Best, who was the Nazi in charge for Denmark, not to deport any Danes to an extermination camp. The principal reason for this agreement was that the Nazis in Denmark were concerned that the Danish underground and resistance activities would accelerate greatly if any Danish Jews were deported to extermination camps. Also the Nazis needed access to Danish food products and their uninterrupted export to Germany was of critical importance. I am sure my mother went to her grave in 1996 without knowing of this agreement.",
+    "location": null,
+    "time": null
+  },
+  "sharing_x5F_group": {
+    "title": " ",
+    "subtitle": "What made you decide to share your story?",
+    "text": "I was not planning to share my story until our oldest daughter talked to her son's middle school teacher in the 2011-12 school year. My debut took place in October 2011. I did not know what to expect from students; I thought they might not take an interest or care about what happened to me. Instead, they were very respectful and well behaved, listened intently and sked some excellent questions. I haven't stopped talking about my Holocaust experiences since then.",
+    "location": null,
+    "time": null
+  },
+  "discrimination_x5F_group": {
+    "title": " ",
+    "subtitle": "Did people still discriminate against after liberation?",
+    "text": "There was never (or maybe VERY limited) discrimination against the Jewish population in Denmark. This was not the case in some of the other countries occupied by the Nazis, such as Poland.",
+    "location": null,
+    "time": null
+  },
+  "attitude_x5F_group": {
+    "title": " ",
+    "subtitle": "Why was the Danish population's attitude towards the Jews so different as compared to the situation in other occupied countries?",
+    "text": "It was partially based on the culture in Denmark where you were first of all considered a Dane; the Jews were well integrated into Danish society, and this was not the case in Poland. Furthermore, Denmark's Jewish population constituted only 0.2% of the total population compared to about 10% in Poland, which resulted in significantly less antisemitism in Denmark. I may add that the Danes wanted to help their countrymen as a show of defiance and as revenge for the Nazi occupation of their country.",
+    "location": null,
+    "time": null
+  },
+  "guilty_x5F_group": {
+    "title": " ",
+    "subtitle": "Do you feel guilty or lucky for being alive?",
+    "text": "Maybe I should feel guilty, but I do not. I feel very lucky, however, being in the minority of those surviving the Holocaust.",
+    "location": null,
+    "time": null
   }
 }
