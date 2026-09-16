@@ -158,7 +158,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
               borderStyle = "border-3 border-gray-400"
             }
             if (selectedPainting === i && selectedGroup == null) {
-              borderStyle = "border-3 border-gray-600"
+              borderStyle = "border-3 border-[var(--highlight-dark)]"
             }
 
             return (
@@ -180,7 +180,7 @@ export function PaintingTimeline(props: PaintingTimelineProps) {
                     ></div>
                   </div>
                   <div
-                    className={`safari-rounded-clip size-18 rounded-full overflow-hidden relative cursor-pointer shadow-md items-center bg-white ${borderStyle} hover:border-gray-500`}
+                    className={`safari-rounded-clip size-18 rounded-full overflow-hidden relative cursor-pointer shadow-md items-center bg-white ${borderStyle} hover:border-[var(--highlight-dark)]`}
                     key={`timeline-entry-${i}`}
                     onClick={() => {
                       dispatch(setSelectedGroup(null));

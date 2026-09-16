@@ -177,9 +177,9 @@ const travelPointLayer: LayerProps = {
     id: "travel-point",
     type: "circle",
     paint: {
-        "circle-color": "#000000",
+        "circle-color": "rgb(230, 202, 173)",
         "circle-radius": 5,
-        "circle-stroke-color": "#ffffff",
+        "circle-stroke-color": "#000000",
         "circle-stroke-width": 1.5,
     },
 };

@@ -163,39 +163,54 @@ function StartScreen({
   const ui = messages[language].startScreen;
 
   return (
-    <section className="start-screen bg-white" aria-labelledby="start-screen-title">
-      <div className="start-screen-art cursor-pointer" aria-hidden="true" onClick={onBegin}>
-        <img src="/images/Title page-1.svg" alt="" />
+    <div className="start-screen bg-white cursor-pointer" aria-labelledby="start-screen-title" onClick={onBegin}>
+      <div className="start-screen-language-wrapper">
+        <div className="start-screen-language" aria-label={ui.language} role="group">
+          {(["en", "da"] as const).map((locale) => (
+            <button
+              key={locale}
+              type="button"
+              aria-pressed={language === locale}
+              onClick={(e) => {
+                onLanguageChange(locale);
+                e.stopPropagation();
+              }}
+            >
+              {locale === "en" ? "English" : "Dansk"}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="start-screen-language" aria-label={ui.language} role="group">
-        {(["en", "da"] as const).map((locale) => (
-          <button
-            key={locale}
-            type="button"
-            aria-pressed={language === locale}
-            onClick={() => onLanguageChange(locale)}
-          >
-            {locale === "en" ? "English" : "Dansk"}
-          </button>
-        ))}
-      </div>
-
-      <div className="start-screen-content cursor-pointer" onClick={onBegin}>
-        <p className="start-screen-eyebrow">{ui.eyebrow}</p>
-        <h1 id="start-screen-title" className={noto_serif.className}>
+      <div className="row-start-2 flex justify-end">
+        <h1 id="start-screen-title" className={`${noto_serif.className}`}>
           {ui.title.split("\n").map((line) => (
-            <span key={line}>{line}</span>
+            <div key={line}>{line}</div>
           ))}
         </h1>
-        <p className={`start-screen-subtitle ${reenie_beanie.className}`}>
+      </div>
+
+      <div className="row-start-2 ml-8">
+        <p className={`text-[var(--highlight-dark)] start-screen-subtitle ${reenie_beanie.className}`}>
           {ui.subtitle}
         </p>
         <p className="start-screen-invitation">{ui.invitation}</p>
 
-        <p className="mt-8 text-2xl text-gray-600">{ui.begin}</p>
+        <p className="mt-8 text-2xl italic text-[var(--highlight-dark)]">{ui.begin}</p>
       </div>
-    </section>
+
+      <div className="row-start-3 start-screen-art-wrapper">
+        <div className="start-screen-art cursor-pointer ml-9" aria-hidden="true">
+          <img src="/images/Title Steen Young.svg" alt="" />
+        </div>
+      </div>
+
+      <div className="row-start-3 start-screen-art-wrapper">
+        <div className="start-screen-art cursor-pointer ml-[-36px]" aria-hidden="true">
+          <img src="/images/Title Steen Old.jpg" alt="" />
+        </div>
+      </div>
+    </div>
   );
 }
 

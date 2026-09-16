@@ -116,7 +116,7 @@ export function PaintingAudio(props: PaintingAudioProps) {
                     {/* Progress bar */}
                     <div className="relative h-2 w-full bg-slate-300 rounded-md">
                         <div
-                            className="absolute left-0 top-0 h-full bg-black rounded-md"
+                            className="absolute left-0 top-0 h-full bg-[var(--highlight-dark)] rounded-md"
                             style={{ width: `${progress}%` }}
                         />
 
@@ -136,8 +136,8 @@ export function PaintingAudio(props: PaintingAudioProps) {
                             {/* Play / Pause */}
                             <button
                                 type="button"
-                                onClick={togglePlay}
-                                className="flex h-4 w-4 items-center justify-center transition hover:text-slate-500 cursor-pointer"
+                                onClick={togglePlay} a
+                                className="flex h-4 w-4 items-center justify-center transition text-[var(--highlight-dark)] hover:text-slate-500 cursor-pointer"
                                 aria-label={isPlaying ? ui.pause : ui.play}
                             >
                                 {isPlaying ? (
@@ -159,7 +159,7 @@ export function PaintingAudio(props: PaintingAudioProps) {
                                     step="0.01"
                                     value={volume}
                                     onChange={handleVolumeChange}
-                                    className="w-20 accent-black h-2"
+                                    className="w-20 accent-[var(--highlight-dark)] h-2"
                                     aria-label={ui.volume}
                                 />
                                 <SpeakerIcon />
