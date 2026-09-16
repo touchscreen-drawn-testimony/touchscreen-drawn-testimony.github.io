@@ -136,7 +136,7 @@ export function PaintingAudio(props: PaintingAudioProps) {
                             {/* Play / Pause */}
                             <button
                                 type="button"
-                                onClick={togglePlay} a
+                                onClick={togglePlay}
                                 className="flex h-4 w-4 items-center justify-center transition text-[var(--highlight-dark)] hover:text-slate-500 cursor-pointer"
                                 aria-label={isPlaying ? ui.pause : ui.play}
                             >
