@@ -12,6 +12,7 @@ import { getSteenPortrait, PaintingAudio } from "./2d-painting/PaintingAudio";
 import { PaintingMap } from "./map/PaintingMap";
 import { ArrowRightIcon, CursorArrowRaysIcon } from "@heroicons/react/24/solid";
 import { TutorialOverlay } from "./TutorialOverlay";
+import type { LineString } from "geojson";
 
 const reenie_beanie = Reenie_Beanie({ weight: "400", subsets: ["latin"] });
 const noto_serif = Noto_Serif({ weight: "400", subsets: ["latin"] });
@@ -130,6 +131,7 @@ export interface MapEntry {
   mapyear?: number;
   start: { lat: number, lon: number };
   end?: { lat: number, lon: number };
+  lineString?: LineString;
 }
 
 export interface StoryDataItem {
@@ -163,18 +165,16 @@ function StartScreen({
   const ui = messages[language].startScreen;
 
   return (
-    <div className="start-screen bg-white cursor-pointer" aria-labelledby="start-screen-title" onClick={onBegin}>
+    <div className="start-screen bg-white" aria-labelledby="start-screen-title">
       <div className="start-screen-language-wrapper">
+
         <div className="start-screen-language" aria-label={ui.language} role="group">
           {(["en", "da"] as const).map((locale) => (
             <button
               key={locale}
               type="button"
               aria-pressed={language === locale}
-              onClick={(e) => {
-                onLanguageChange(locale);
-                e.stopPropagation();
-              }}
+              onClick={() => onLanguageChange(locale)}
             >
               {locale === "en" ? "English" : "Dansk"}
             </button>
@@ -182,33 +182,23 @@ function StartScreen({
         </div>
       </div>
 
-      <div className="row-start-2 flex justify-end">
-        <h1 id="start-screen-title" className={`${noto_serif.className}`}>
+      <div className="start-screen-art cursor-pointer" aria-hidden="true" onClick={onBegin}>
+        <img src="/images/Title Steen.svg" alt="" />
+      </div>
+
+      <div className="start-screen-content cursor-pointer" onClick={onBegin}>
+        <p className="start-screen-eyebrow">{ui.eyebrow}</p>
+        <h1 id="start-screen-title" className={noto_serif.className}>
           {ui.title.split("\n").map((line) => (
             <div key={line}>{line}</div>
           ))}
         </h1>
-      </div>
-
-      <div className="row-start-2 ml-8">
         <p className={`text-[var(--highlight-dark)] start-screen-subtitle ${reenie_beanie.className}`}>
           {ui.subtitle}
         </p>
         <p className="start-screen-invitation">{ui.invitation}</p>
 
         <p className="mt-8 text-2xl italic text-[var(--highlight-dark)]">{ui.begin}</p>
-      </div>
-
-      <div className="row-start-3 start-screen-art-wrapper">
-        <div className="start-screen-art cursor-pointer ml-9" aria-hidden="true">
-          <img src="/images/Title Steen Young.svg" alt="" />
-        </div>
-      </div>
-
-      <div className="row-start-3 start-screen-art-wrapper">
-        <div className="start-screen-art cursor-pointer ml-[-36px]" aria-hidden="true">
-          <img src="/images/Title Steen Old.jpg" alt="" />
-        </div>
       </div>
     </div>
   );
@@ -376,6 +366,7 @@ function MainMenu() {
                 <PaintingMap
                   start={story.map.start}
                   end={story.map.end}
+                  lineString={story.map.lineString}
                   mapyear={story.map.mapyear}
                   ariaLabel={ui.map.historicalTravelMap}
                 />

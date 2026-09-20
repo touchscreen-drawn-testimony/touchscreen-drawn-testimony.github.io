@@ -121,6 +121,28 @@
       "end": {
         "lat": 50.51061972769558,
         "lon": 14.149830134701624
+      },
+      "lineString": {
+        "type": "LineString",
+        "coordinates": [
+          [10.38680230739627, 55.401378368218836],
+          [10.195328216744317, 55.34411400186823],
+          [9.741836949410741, 55.56916834048797],
+          [9.316674850721478, 55.493297854011615],
+          [9.406875353752435, 54.76833654059441],
+          [9.67747686178077, 54.30143281886522],
+          [9.979913842531623, 54.074795800109314],
+          [9.66155912603833, 53.74662857853525],
+          [10.008212039647495, 53.55374264296489],
+          [11.216191321398659, 53.41693214255505],
+          [11.762700251527392, 53.00172012743586],
+          [13.359779738666857, 52.53408980089987],
+          [13.633918518147565, 51.82155956959186],
+          [13.513651180772957, 51.471472284707296],
+          [13.729424933121518, 51.03978701829048],
+          [14.146511906985117, 50.50768442745552],
+          [14.149437485675897, 50.49184533930756]
+        ]
       }
     },
     "data": [
@@ -166,8 +188,8 @@
   },
   "roof_x5F_group": {
     "title": "Transport",
-    "subtitle": "Station Bauschowitz-Theresienstadt",
-    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Bauschowitz-Theresienstadt, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. \n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time at Theresienstadt.",
+    "subtitle": "Station Theresienstadt-Bauschowitz",
+    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Theresienstadt-Bauschowitz, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. \n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time at Theresienstadt.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "5 October 1943",
     "audio": "transport_valuables.mp3",
@@ -221,7 +243,7 @@
     "data": [
       {
         "image": "/images/data/labour_mica.jpg",
-        "caption": "Two pieces of mica saved by Ilse Silten, a forced laborer in a glimmer factory." ,
+        "caption": "Two pieces of mica saved by Ilse Silten, a forced laborer in a glimmer factory.",
         "copyright": " United States Holocaust Memorial Museum."
       },
       {
@@ -448,7 +470,7 @@
         "image": "/images/data/buses_document.jpg",
         "caption": "Lists of released Jews from Theresienstadt who arrived in Sweden.",
         "copyright": " Arolsen Archives."
-      } 
+      }
     ],
     "map": {
       "title": "From Theresienstadt to the Danish border with the borders of 1938.",
@@ -460,6 +482,26 @@
       "end": {
         "lat": 54.805063190634655,
         "lon": 9.329378684046349
+      },
+      "lineString": {
+        "type": "LineString",
+        "coordinates": [
+          [14.167088829000193, 50.51441008192132],
+          [13.962612675976791, 50.608929464732086],
+          [13.95767921645928, 50.698073326842895],
+          [13.897655458996255, 50.77873011675042],
+          [13.605759105690991, 51.06174451308938],
+          [13.34593023776885, 51.05605974344338],
+          [12.760493045243964, 51.257699142873776],
+          [12.522042503945714, 51.317865022209375],
+          [11.668554010269398, 51.73376638125237],
+          [11.541928549710294, 52.160001125965124],
+          [9.90554806440692, 52.39493465584368],
+          [9.69212097748162, 52.84774018308916],
+          [10.091185170802492, 53.25998001382792],
+          [9.963042620673711, 54.17011074702082],
+          [9.346770331672495, 54.82621961430997]
+        ]
       }
     }
   },
@@ -495,6 +537,22 @@
       "end": {
         "lat": 55.6025,
         "lon": 13.000833
+      },
+      "lineString": {
+        "type": "LineString",
+        "coordinates": [
+          [9.357836625726323, 54.834964114161025],
+          [9.423158328808753, 55.49948926731361],
+          [9.674283986793146, 55.54057792253558],
+          [10.346371728345495, 55.36029178981294],
+          [10.525643508897065, 55.36400459254174],
+          [10.807252628255284, 55.31116752595358],
+          [11.560629600770032, 55.4604152921538],
+          [12.15650868699833, 55.48221923684352],
+          [12.421424480899944, 55.629183065963964],
+          [12.663840578491813, 55.63532877545892],
+          [13.005690820691154, 55.60172045887723]
+        ]
       }
     }
   },
@@ -515,6 +573,19 @@
       "end": {
         "lat": 55.403756,
         "lon": 10.40237
+      },
+      "lineString": {
+        "type": "LineString",
+        "coordinates": [
+          [13.005690820691154, 55.60172045887723],
+          [12.663840578491813, 55.63532877545892],
+          [12.421424480899944, 55.629183065963964],
+          [12.15650868699833, 55.48221923684352],
+          [11.560629600770032, 55.4604152921538],
+          [10.807252628255284, 55.31116752595358],
+          [10.525643508897065, 55.36400459254174],
+          [10.346371728345495, 55.36029178981294]
+        ]
       }
     }
   },
