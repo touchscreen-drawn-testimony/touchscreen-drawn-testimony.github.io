@@ -265,21 +265,42 @@
     "subtitle": "Queueing for Food",
     "text": "During his time in Theresienstadt Ghetto, Steen and the other prisoners had to stand in long lines to receive their meal. They ate potato soup almost every day, which was little more than boiled water and potato peels. At breakfast, prisoners received a substitute for coffee and a single loaf of bread to share among the family for the entire week. Sometimes, they received a special dish of dumplings.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "data": [
+      {
+        "image": "",
+        "caption": "",
+        "copyright": ""
+      }
+    ]
   },
   "exchangingfood_x5F_group": {
     "title": "Living Conditions in Theresienstadt",
     "subtitle": "Exchanging Food",
     "text": "When Steen outgrew his shoes, there was no way to replace them. Food had become as valuable as gold, and prisoners used it to trade for things they needed. Steen’s mother exchanged food for a pair of second-hand shoes with a fellow prisoner. Around 35,000 people in the camp died as a result of malnutrition, a stark reminder of the scarcity of basic necessities.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "data": [
+      {
+        "image": "",
+        "caption": "",
+        "copyright": ""
+      }
+    ]
   },
   "carepackages_x5F_group": {
     "title": "Living Conditions in Theresienstadt",
     "subtitle": "Care Packages from the Red Cross",
     "text": "In April 1944, about six months after their arrival, Danish prisoners began receiving packages from Denmark and Sweden containing food, vitamins, and clothing. These parcels were crucial to their survival. However, guards frequently took food from the packages before they reached the prisoners. One parcel addressed to Steen’s mother arrived unusually heavy. When she opened it, the food had been removed and replaced with stones.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "data": [
+      {
+        "image": "/images/data/Food_Parcel.jpg",
+        "caption": "Example of a food parcel sent to Danish prisoners in Theresienstadt Ghetto.",
+        "copyright": " Dansk Institut for Internationale Studier, Folkedrab."
+      }
+    ]
   },
   "infirmary": {
     "title": "Infirmary",
