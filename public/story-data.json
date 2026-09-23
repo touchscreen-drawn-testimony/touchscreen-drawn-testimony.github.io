@@ -103,7 +103,14 @@
     "text": "A group of around sixty Danish Jews, including Steen and his family, were assembled at the local school Vestre Skole before being transported to the nearby city of Kolding and later to Theresienstadt Ghetto.",
     "location": "Odense, Denmark",
     "time": "October 1943",
-    "audio": "arrest_vestreskole.mp3"
+    "audio": "arrest_vestreskole.mp3",
+    "data": [
+      {
+        "image": "/images/data/arrest_vestreskole.jpg",
+        "caption": "Danish Jews gathered in the schoolyard at Vestre School before the deportation to the Theresienstadt Ghetto in October 1943.",
+        "copyright": " Odense Stadsarkiv. Photo: Wiibroe Lorentzen."
+      }
+    ]
   },
   "transport": {
     "title": "Transport",
