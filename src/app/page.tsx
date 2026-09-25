@@ -54,14 +54,14 @@ function AnimatedWords({
   const words = text.trim().split(/\s+/);
 
   return (
-    <span className={`word-reveal ${className}`} aria-label={text}>
+    <span className={`${className}`} aria-label={text}>
       {words.map((word, index) => (
         <span key={`${word}-${index}`} aria-hidden="true">
           <span
-            className="word-reveal-item"
-            style={{
-              "--word-delay": `${delay + Math.min(index * 24, 600)}ms`,
-            } as CSSProperties}
+          // className="word-reveal-item"
+          // style={{
+          //   "--word-delay": `${delay + Math.min(index * 24, 600)}ms`,
+          // } as CSSProperties}
           >
             {word}
           </span>
@@ -93,7 +93,7 @@ function renderStoryParagraph(text: string, paragraphIndex: number) {
     parts.push(
       <div
         key={`story-quote-${paragraphIndex}-${match.index}`}
-        className="w-full flex flex-row gap-3 items-center content-reveal"
+        className="w-full flex flex-row gap-3 items-center"
       >
         {getSteenPortrait()}
         <span className="italic">
@@ -324,7 +324,7 @@ function MainMenu() {
             ))
           : ui.story.missingTitle}
       </div>
-      <div className={`text-2xl content-reveal ${reenie_beanie.className}`}>
+      <div className={`text-2xl ${reenie_beanie.className}`}>
         {story.subtitle
           ? story.subtitle
             .split("\n")
@@ -335,13 +335,13 @@ function MainMenu() {
             ))
           : ui.story.missingSubtitle}
       </div>
-      <div className="text-sm opacity-75 flex flex-col gap-1 content-reveal">
+      <div className="text-sm opacity-75 flex flex-col gap-1">
         <p>{story.time}</p>
         <p>{story.location}</p>
       </div>
       {dataView && story.data != null ?
         <>
-          {story.data.map((e: any, i: number) => <div key={`story-data-${i}`} className="border-black border-0 story-media-reveal">
+          {story.data.map((e: any, i: number) => <div key={`story-data-${i}`} className="border-black border-0">
             {e.image && <div className="flex items-center cursor-zoom-in mb-1">
               <img onClick={() => { setFocusData(e) }} className="w-full z-50" src={e.image} alt={e.caption ?? ""} />
             </div>}
@@ -355,13 +355,13 @@ function MainMenu() {
               ? renderStoryText(story.text)
               : ui.story.missingText}
           </div>
-          <div className="text-base flex gap-1 flex-col story-media-reveal">
+          <div className="text-base flex gap-1 flex-col">
             {story.audio &&
               <PaintingAudio src={`/audio/${story.audio}`} />
             }
           </div>
           {
-            story.map && <div className="text-sm flex gap-1 flex-col z-0 story-media-reveal">
+            story.map && <div className="text-sm flex gap-1 flex-col z-0">
               <div className="h-[300px] w-full border-2 border-gray-300 rounded-md opacity-90">
                 <PaintingMap
                   start={story.map.start}
@@ -378,7 +378,7 @@ function MainMenu() {
           }
           {painting.inactive !== true && !selectedGroup &&
             <div className="mt-7 w-full flex justify-center">
-              <div className="text-base flex flex-row items-center gap-1 content-reveal">
+              <div className="text-base flex flex-row items-center gap-1">
                 <div><CursorArrowRaysIcon className="size-7 animate-pulse" /></div>
                 <span className="italic text-gray-600">{ui.story.interactionPrompt}</span>
               </div>
