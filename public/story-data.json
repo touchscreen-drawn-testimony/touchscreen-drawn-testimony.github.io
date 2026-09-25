@@ -3,7 +3,7 @@
     "title": "A Danish Boy In Theresienstadt",
     "shorttitle": "A Danish Boy",
     "subtitle": "A Drawn Testimony",
-    "text": "On October 2, 1943, eight-year-old Steen Metz and his parents were arrested in their home in Odense, Denmark, and deported to Theresienstadt Concentration Camp.\nWhat followed were eighteen months of hunger, brutality, and loss—including the death of his father from starvation. Of the 15,000 children who passed through Theresienstadt, fewer than 1,500 survived. Steen was one of them. For decades, like many Holocaust survivors, Steen kept his experiences private. But in 2011, he was ready to share his story through his memoir, A Danish Boy in Theresienstadt.\nNow, we retell Steen's journey through this interactive visual experience, where hand-drawn illustrations 'reimagine' his memories and guide you through the story to witness, to explore, and to remember.",
+    "text": "On October 2, 1943, eight-year-old Steen Metz and his parents were arrested in their home in Odense, Denmark, and deported to the Theresienstadt Ghetto.\nWhat followed were eighteen months of hunger, brutality, and loss—including the death of his father from starvation. Of the 15,000 children who passed through Theresienstadt, fewer than 1,500 survived. Steen was one of them. For decades, like many Holocaust survivors, Steen kept his experiences private. But in 2011, he was ready to share his story through his memoir, A Danish Boy in Theresienstadt.\nNow, we retell Steen's journey through this interactive visual experience, where hand-drawn illustrations 'reimagine' his memories and guide you through the story to witness, to explore, and to remember.",
     "location": "Odense, Denmark",
     "time": "1943",
     "data": [
@@ -100,10 +100,17 @@
   "vestreskole_x5F_group": {
     "title": "The Arrest",
     "subtitle": "The Journey to Theresienstadt",
-    "text": "A group of around sixty Danish Jews, including Steen and his family, were assembled at the local school Vestre Skole before being transported to the nearby city of Kolding and later to Theresienstadt ghetto.",
+    "text": "A group of around sixty Danish Jews, including Steen and his family, were assembled at the local school Vestre Skole before being transported to the nearby city of Kolding and later to Theresienstadt Ghetto.",
     "location": "Odense, Denmark",
     "time": "October 1943",
-    "audio": "arrest_vestreskole.mp3"
+    "audio": "arrest_vestreskole.mp3",
+    "data": [
+      {
+        "image": "/images/data/arrest_vestreskole.png",
+        "caption": "Danish Jews gathered in the schoolyard at Vestre School before the deportation to the Theresienstadt Ghetto in October 1943.",
+        "copyright": " Odense Stadsarkiv. Photo: Wiibroe Lorentzen."
+      }
+    ]
   },
   "transport": {
     "title": "Transport",
@@ -148,7 +155,7 @@
     "data": [
       {
         "image": "/images/data/transport_document.jpg",
-        "caption": "Transportation document of Steen Axel Metz. 54 was the number given to Steen, XXV/I refers to the first transport of Danish Jews to Theresienstadt.",
+        "caption": "Transportation document of Steen Axel Metz. 54 was the number given to Steen, XXV/I refers to the first transport of Danish Jews to the Theresienstadt Ghetto.",
         "copyright": " Arolsen Archives."
       },
       {
@@ -158,12 +165,12 @@
       },
       {
         "image": "/images/data/arrival2.jpg",
-        "caption": "Arrival of Jews in Theresienstadt.",
+        "caption": "Arrival of Jews in the Theresienstadt Ghetto.",
         "copyright": " United States Holocaust Memorial Museum."
       },
       {
         "image": "/images/data/trainstation.jpg",
-        "caption": "Postcard of the Theresienstadt-Bauschowitz train station in 1907, where prisoners would arrive before the construction of a station in Theresienstadt.",
+        "caption": "Postcard of the Theresienstadt-Bauschowitz train station in 1907, where prisoners would arrive before the construction of a station in the Theresienstadt Ghetto.",
         "copyright": " Zdeněk Fořt."
       }
     ]
@@ -177,7 +184,7 @@
     "data": [
       {
         "caption": "At the railway station in Kolding we had to stand in rank and rows and were counted about 10 times by the screaming Gestapo. We were finally stuffed into cattle cars with about 35 persons in each car where it was completely dark, without any lights or an opportunity to go on the lavatory. We did not receive anything to eat nor drink except at one station where we received two bottles of water to be shared among 35 prisoners during the 84-hour journey.",
-        "copyright": " Magna Metz's recollections of Theresienstadt in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
+        "copyright": " Magna Metz's recollections of the Theresienstadt Ghetto in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
       },
       {
         "image": "/images/data/cattlecar.png",
@@ -189,7 +196,7 @@
   "roof_x5F_group": {
     "title": "Transport",
     "subtitle": "Station Theresienstadt-Bauschowitz",
-    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Theresienstadt-Bauschowitz, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. \n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time at Theresienstadt.",
+    "text": "Theresienstadt had no railway station of its own. Instead, deportees were brought to the station Theresienstadt-Bauschowitz, known today as Bohušovice train station. From here, they were required to walk one and a half miles to reach the camp. \n\nAlthough the newly arrived prisoners were separated into groups based on gender and age, Steen was permitted to remain with his mother during his time in the Theresienstadt Ghetto.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "5 October 1943",
     "audio": "transport_valuables.mp3",
@@ -211,7 +218,7 @@
       {
         "image": "/images/data/barracks2.jpg",
         "caption": "Picture of Barracks.",
-        "copyright": " Photo Archive Terezín Memorial."
+        "copyright": " Photo Archive, Terezín Memorial."
       },
       {
         "image": "/images/data/barracks.jpg",
@@ -220,24 +227,24 @@
       },
       {
         "image": "/images/data/barracks_magdeburg.jpg",
-        "caption": "Water color painting created by Helga Wolfenstein King, created in Theresienstadt in 1945.",
+        "caption": "Water color painting created by Helga Wolfenstein King, created in Theresienstadt Ghetto in 1945.",
         "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19404. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
       },
       {
         "image": "/images/data/living_barracks.jpg",
-        "caption": "A watercolor painting created by Zdenka Eismannova while she was interned in Theresienstadt depicting women resting on the bunk beds of a crowded barrack.",
+        "caption": "A watercolor painting created by Zdenka Eismannova while she was interned in the Theresienstadt Ghetto depicting women resting on the bunk beds of a crowded barrack.",
         "copyright": " United States Holocaust Memorial Museum. Provenance: Ron Neulinger."
       },
       {
         "caption": "We had lots of fleas, bedbugs and even worse, lice. I will never forget during our initial time in the loft when my boy and I had been allotted three small straw mats and nothing else. We were both lying on those mats and my boy said the next morning that he could not sleep due to his itching and he had never experienced that at home.",
-        "copyright": " Magna Metz's recollections of Theresienstadt in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
+        "copyright": " Magna Metz's recollections of the Theresienstadt Ghetto in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
       }
     ]
   },
   "mother_x5F_group": {
     "title": "Forced Labour",
     "subtitle": "Mica Production",
-    "text": "According to Steen’s testimony, his mother was not subjected to physical abuse in Theresienstadt. In addition to childcare duties, she was assigned to factory work, producing insulation material for airplanes from Mica. On one occasion, after telling a soldier that she was faring poorly following her husband’s death from malnutrition, the soldier returned each day for eight days, compelling her to state that her husband had died of pneumonia. On a separate occasion, a guard deliberately pushed over a bucket of dirty water while she was cleaning floors, forcing her to start over.",
+    "text": "According to Steen’s testimony, his mother was not subjected to physical abuse in the Theresienstadt Ghetto. In addition to childcare duties, she was assigned to factory work, producing insulation material for airplanes from Mica. On one occasion, after telling a soldier that she was faring poorly following her husband’s death from malnutrition, the soldier returned each day for eight days, compelling her to state that her husband had died of pneumonia. On a separate occasion, a guard deliberately pushed over a bucket of dirty water while she was cleaning floors, forcing her to start over.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1935 - 1943",
     "data": [
@@ -248,7 +255,7 @@
       },
       {
         "caption": "The work assigned to us was not always equally bad, but the work I performed during the longest time was absolutely the worst and I remember it well. I had that work during our last nine months in the camp. It was factory work dealing with mica. We worked in shifts from 6:00 AM to 2:00 PM and 12:00 noon to 10:00 PM with around 300 women on each shift. We sat on wooden benches in the newly built huts where it was very cold especially in the morning. Some people were fortunate enough to have blankets which they brought along. We had to 'split' the mica, using a tool similar to a long nail file, into many fine pieces which were then sorted by size into a box with three seperate compartments holding different sizes.",
-        "copyright": " Magna Metz's recollections of Theresienstadt in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
+        "copyright": " Magna Metz's recollections of Theresienstadt Ghetto in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
       }
     ]
   },
@@ -263,23 +270,55 @@
     "title": "Living Conditions in Theresienstadt",
     "shorttitle": "Living Conditions",
     "subtitle": "Queueing for Food",
-    "text": "During his time in Theresienstadt Ghetto, Steen and the other prisoners had to stand in long lines to receive their meal. They ate potato soup almost every day, which was little more than boiled water and potato peels. At breakfast, prisoners received a substitute for coffee and a single loaf of bread to share among the family for the entire week. Sometimes, they received a special dish of dumplings.",
+    "text": "During his time in Theresienstadt Ghetto, Steen and the other prisoners had to stand in long lines to receive their meal. They ate potato soup almost every day, which was little more than boiled water and potato peels. At breakfast, prisoners received a substitute for coffee and some bread to share among the family for the entire week. Sometimes, they received a special dish of dumplings.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "audio": "food.wav",
+    "data": [
+      {
+        "image": "/images/data/Food_Dutch Jews.jpg",
+        "caption": "View from above of a prisoner wearing a cook's uniform doling out food in the ghetto courtyard to prisoners who have just arrived in the Theresienstadt Ghetto with a transport of Dutch Jews.",
+        "copyright": " United States Holocaust Memorial Museum. Provenance: Ivan Vojtech Fric"
+      },
+      {
+        "image": "/images/data/Food_Distribution.png",
+        "caption": "Food distribution, drawn by Franz Peter Kien between 1942-1944 in Theresienstadt Ghetto.",
+        "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19447. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
+      },
+      {
+        "image": "/images/data/Food_Lining Up.jpg",
+        "caption": " Lining up for food, drawn by Malva Schalek between 1942-1944 in Theresienstadt Ghetto.",
+        "copyright": " Art Collection, Terezín Memorial"
+      }
+    ]
   },
   "exchangingfood_x5F_group": {
     "title": "Living Conditions in Theresienstadt",
     "subtitle": "Exchanging Food",
     "text": "When Steen outgrew his shoes, there was no way to replace them. Food had become as valuable as gold, and prisoners used it to trade for things they needed. Steen’s mother exchanged food for a pair of second-hand shoes with a fellow prisoner. Around 35,000 people in the camp died as a result of malnutrition, a stark reminder of the scarcity of basic necessities.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "data": [
+      {
+        "image": "/images/data/Food_Potato Peelers.png",
+        "caption": "Potato peelers, painted by Helga Wolfenstein King between 1942-1945 in Theresienstadt Ghetto.",
+        "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19346. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
+      }
+    ]
   },
   "carepackages_x5F_group": {
     "title": "Living Conditions in Theresienstadt",
     "subtitle": "Care Packages from the Red Cross",
     "text": "In April 1944, about six months after their arrival, Danish prisoners began receiving packages from Denmark and Sweden containing food, vitamins, and clothing. These parcels were crucial to their survival. However, guards frequently took food from the packages before they reached the prisoners. One parcel addressed to Steen’s mother arrived unusually heavy. When she opened it, the food had been removed and replaced with stones.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "1935 - 1943"
+    "time": "1935 - 1943",
+    "data": [
+      {
+        "image": "/images/data/Food_Parcel.jpg",
+        "caption": "Example of a food parcel sent to Danish prisoners in Theresienstadt Ghetto.",
+        "copyright": " Dansk Institut for Internationale Studier, Folkedrab."
+      }
+    ]
   },
   "infirmary": {
     "title": "Infirmary",
@@ -298,29 +337,29 @@
   "coat_x5F_group": {
     "title": "Infirmary",
     "subtitle": "Forced Labour",
-    "text": "Within the camp, Axel was assigned to road-construction labour, physically demanding work to which he was not used. Working days were long, with minimal rest periods and little food. On one occasion, a guard confiscated his coat stating that it was unsuitable for manual labour.\n\nSteen only learned after the war that his father had been subjected to physical abuse during his time at Theresienstadt.",
+    "text": "Within the camp, Axel was assigned to road-construction labour, physically demanding work to which he was not used. Working days were long, with minimal rest periods and little food. On one occasion, a guard confiscated his coat stating that it was unsuitable for manual labour.\n\nSteen only learned after the war that his father had been subjected to physical abuse during his time in the Theresienstadt Ghetto.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "13 March 1944",
     "audio": "infirmary_coat.wav",
     "data": [
       {
         "image": "/images/data/forcedLabour2.jpg",
-        "caption": "A painting depicting the main entrance gate to the Theresienstadt ghetto in the Czech Republic and forced labourers with tools returning from work. Painted by Edvard Neugebauer on August 28, 1943.",
+        "caption": "A painting depicting the main entrance gate to the Theresienstadt Ghetto in the Czech Republic and forced labourers with tools returning from work. Painted by Edvard Neugebauer on August 28, 1943.",
         "copyright": " Montreal Holocaust Museum. Photo: Peter Berra."
       },
       {
         "image": "/images/data/labour_shovels.png",
-        "caption": "Oil crayon drawing by Franz Peter Kien of prisoners in Theresienstadt digging with shovels, created 1942–1944.",
+        "caption": "Oil crayon drawing by Franz Peter Kien of prisoners in Theresienstadt Ghetto digging with shovels, created 1942–1944.",
         "copyright": " Moshal Repository, Yad Vashem Art Collection, acc. no. 19450. Acquired courtesy of Barbara and Lewis Shrensky, Washington, D.C."
       },
       {
         "image": "/images/data/forcedLabour.jpg",
-        "caption": "Forced Labour in Theresienstadt.",
+        "caption": "Forced Labour in Theresienstadt Ghetto.",
         "copyright": " United States Holocaust Memorial Museum."
       },
       {
         "image": "/images/data/infirmary_forcedlabour.jpg",
-        "caption": "Jews at forced labor, putting up fences beside barracks buildings in the Theresienstadt ghetto.",
+        "caption": "Jews at forced labor, putting up fences beside barracks buildings in the Theresienstadt Ghetto.",
         "copyright": " Photo Archive, Ghetto Fighters' House Museum Archive, catalogue no. 15656."
       }
     ]
@@ -331,7 +370,19 @@
     "text": "The toll of the camp conditions caused Axel Mogens Metz to lose about fifty percent of his body weight. Although the camp infirmary’s medical staff performed their duties thoroughly, they lacked the supplies necessary to provide adequate care. On 13 March 1944, Steen’s father died of malnutrition at the age of forty; the Nazi authorities recorded the cause of death as pneumonia.\n\nIn a later interview, Steen’s mother recounted that she was required to visit seventeen separate locations before receiving confirmation of her husband’s death.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "13 March 1944",
-    "audio": "infirmary_death.mp3"
+    "audio": "infirmary_death.mp3",
+    "data": [
+      {
+        "image": "/images/data/infirmary_portrait.png",
+        "caption": null,
+        "copyright": null
+      },
+      {
+        "image": "/images/data/infirmary_ashes.png",
+        "caption": "Disposal of urns with ashes of the deceased (removal of urns from the columbarium), drawn by Lederer Fritz between 1944-1955 in Theresienstadt.",
+        "copyright": " Art Archive, Terezín Memorial."
+      }
+    ]
   },
   "soccer": {
     "title": "Friendship",
@@ -342,12 +393,12 @@
     "data": [
       {
         "image": "/images/data/soccer_childrenbarrack.avif",
-        "caption": "Photo of a street in Theresienstadt near the childrens' barracks, made during the visit of the International Delegation of the Red Cross.",
+        "caption": "Photo of a street in Theresienstadt Ghetto near the childrens' barracks, made during the visit of the International Delegation of the Red Cross.",
         "copyright": " ICRC - International Committee of the Red Cross"
       },
       {
         "image": "/images/data/soccer_propaganda.avif",
-        "caption": "Children playing in a park in Theresienstadt, propaganda photo made during the visit of the International Delegation of the Red Cross.",
+        "caption": "Children playing in a park in Theresienstadt Ghetto, propaganda photo made during the visit of the International Delegation of the Red Cross.",
         "copyright": " ICRC - International Committee of the Red Cross"
       },
       {
@@ -366,19 +417,24 @@
     "data": [
       {
         "image": "/images/data/soccer_childrenbarrack.avif",
-        "caption": "Photo of a street in Theresienstadt near the childrens' barracks, made during the visit of the International Delegation of the Red Cross.",
+        "caption": "Photo of a street in Theresienstadt Ghetto near the childrens' barracks, made during the visit of the International Delegation of the Red Cross.",
         "copyright": " ICRC - International Committee of the Red Cross"
       },
       {
-        "caption": "Every three months we could purchase a single item in the 'shops' using a special rationing card. The items available in the 'shops' consisted of items taken from homes in Germany or from the prisoners' suitcases in Theresienstadt before they were returned to the prisoners. My husband and boy bought a pair of white short ankle socks for me since my feet were so cold at night. Additionally I made a soccer ball for my boy; it was made from old rags and the life of the ball was very short.",
-        "copyright": " Magna Metz's recollections of Theresienstadt in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
+        "image": "/images/data/soccer_playground.png",
+        "caption": "Playground in Terezin, painted by Eduard Neugebauer on 28 June 1944.",
+        "copyright": " Art Collection, Terezín Memorial."
+      },
+      {
+        "caption": "Every three months we could purchase a single item in the 'shops' using a special rationing card. The items available in the 'shops' consisted of items taken from homes in Germany or from the prisoners' suitcases in Theresienstadt Ghetto before they were returned to the prisoners. My husband and boy bought a pair of white short ankle socks for me since my feet were so cold at night. Additionally I made a soccer ball for my boy; it was made from old rags and the life of the ball was very short.",
+        "copyright": " Magna Metz's recollections of Theresienstadt Ghetto in a survey conducted by the Danish government in 1946. In: A Danish Boy in Theresienstadt. Translated by Steen."
       }
     ]
   },
   "steenmetz_x5F_group": {
     "title": "Friendship",
     "subtitle": "Moments of Childhood",
-    "text": "Besides lining up for food and doing voluntary work, Steen played soccer with some of the Czech children in Theresienstadt. Steen recalls that these were the only moments where he felt closest to being a nine-year-old.",
+    "text": "Besides lining up for food and doing voluntary work, Steen played soccer with some of the Czech children in the Theresienstadt Ghetto. Steen recalls that these were the only moments where he felt closest to being a nine-year-old.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "1943 - 1945"
   },
@@ -392,7 +448,7 @@
     "data": [
       {
         "image": "/images/data/soccer_propaganda.avif",
-        "caption": "Children playing in a park in Theresienstadt, propaganda photo made during the visit of the International Delegation of the Red Cross.",
+        "caption": "Children playing in a park in Theresienstadt Ghetto, propaganda photo made during the visit of the International Delegation of the Red Cross.",
         "copyright": " ICRC - International Committee of the Red Cross"
       },
       {
@@ -410,9 +466,9 @@
     "time": "February 1944 – June 1944",
     "data": [
       {
-        "image": null,
-        "caption": null,
-        "copyright": null
+        "image": "/images/data/modelcamp_pavillion.jpg",
+        "caption": "Pavillion built for the propaganda movie",
+        "copyright": " Terezín Memorial"
       }
     ]
   },
@@ -421,20 +477,33 @@
     "subtitle": "The Beautification Program",
     "text": "In preparation for the inspection, the Nazis initiated the beautification programme in the beginning of February 1944. Streets and buildings were cleaned, flower beds were laid out, and recreational spaces were constructed. To reduce the appearance of overcrowding, approximately 7,500 prisoners were deported to Auschwitz prior to the visit.\n\nThe inspection took place in the summer of 1944, lasting between four and eight hours. The visit had been carefully rehearsed in advance. Prisoners were directed to perform assigned activities, hard labour was suspended, and Danish Jews were relocated to better quarters.",
     "location": "Theresienstadt, Czechoslovakia",
-    "time": "February – June 1944"
+    "time": "February – June 1944",
+    "audio": "modelcamp_delegation.mp3",
+    "data": [
+      {
+        "image": "/images/data/modelcamp_performance.jpg",
+        "caption": "The pavillion that was erected in Theresienstadt as part of the 'beautification' program. On the day of the Red Cross visit to the camp, concerts were played here.",
+        "copyright": " Unknown"
+      },
+      {
+        "image": "/images/data/modelcamp_brundibar.jpg",
+        "caption": "Child prisoners in Theresienstadt taking part in the children's opera Brundibár, a Czech opera about good and evil. After the play was recorded for the propaganda film, the director Kurt Gerron and the children were sent off by transport. Salle Fischermann, a Danish Holocaust survivor and lighting assistant, recalls having to help them on board and the dismal feeling after, this was the worst transport he had witnessed. Only six of the 2.000 children survived.",
+        "copyright": " Yad Vashem"
+      }
+    ]
   },
   "whitebus": {
     "title": "Liberation by the White Buses",
     "shorttitle": "White Buses",
     "subtitle": "Happier Times",
-    "text": "A few weeks before the end of the war, prisoners in Theresienstadt heard rumours that the White Buses were on their way from Sweden to liberate Scandinavian prisoners, including the Danish Jews. The Swedish Count Folke Bernadotte had negotiated for their release, cueing the start of the White Buses operation. The Danish prisoners – including Steen and his mother – were moved to the Jäger Barracks, where the White Buses arrived on April 15, 1945, to save them.",
+    "text": "A few weeks before the end of the war, the prisoners in Theresienstadt Ghetto heard rumours that the White Buses were on their way from Sweden to liberate Scandinavian prisoners, including the Danish Jews. The Swedish Count Folke Bernadotte had negotiated for their release, cueing the start of the White Buses operation. The Danish prisoners – including Steen and his mother – were moved to the Jäger Barracks, where the White Buses arrived on April 15, 1945, to save them.",
     "location": "Theresienstadt, Czechoslovakia",
     "time": "15 April 1945",
     "audio": "buses_liberation.mp3",
     "data": [
       {
         "image": "/images/data/whitebuses_jagerkaserne.jpg",
-        "caption": "The Jäger Barracks building in Theresienstadt, with Jewish women from Hungary, likely photographed during the last days before the ghetto's liberation or shortly after.",
+        "caption": "The Jäger Barracks building in Theresienstadt Ghetto, with Jewish women from Hungary, likely photographed during the last days before the ghetto's liberation or shortly after.",
         "copyright": " Yad Vashem Photo Archive, catalog no. 15621, registry no. 10976/p."
       },
       {
@@ -468,7 +537,7 @@
       },
       {
         "image": "/images/data/buses_document.jpg",
-        "caption": "Lists of released Jews from Theresienstadt who arrived in Sweden.",
+        "caption": "Lists of released Jews from Theresienstadt Ghetto who arrived in Sweden.",
         "copyright": " Arolsen Archives."
       }
     ],
@@ -486,21 +555,15 @@
       "lineString": {
         "type": "LineString",
         "coordinates": [
-          [14.167088829000193, 50.51441008192132],
-          [13.962612675976791, 50.608929464732086],
-          [13.95767921645928, 50.698073326842895],
-          [13.897655458996255, 50.77873011675042],
-          [13.605759105690991, 51.06174451308938],
-          [13.34593023776885, 51.05605974344338],
-          [12.760493045243964, 51.257699142873776],
-          [12.522042503945714, 51.317865022209375],
-          [11.668554010269398, 51.73376638125237],
-          [11.541928549710294, 52.160001125965124],
-          [9.90554806440692, 52.39493465584368],
-          [9.69212097748162, 52.84774018308916],
-          [10.091185170802492, 53.25998001382792],
-          [9.963042620673711, 54.17011074702082],
-          [9.346770331672495, 54.82621961430997]
+          [14.149767946973896, 50.51084305318441],
+          [13.825042069526878, 50.63889772400475],
+          [13.742483040305165, 51.03864716493985],
+          [13.062502496928039, 52.36624119859543],
+          [12.880946952847111, 52.607786845731205],
+          [11.398016971927104, 53.632563283190485],
+          [10.685840090406943, 53.86631601511227],
+          [9.983130941699331, 54.07159909560899],
+          [9.354836649141978, 54.83094454398937]
         ]
       }
     }
@@ -523,7 +586,7 @@
       },
       {
         "image": "/images/data/buses_haderslev.jpg",
-        "caption": "Transport of Danish Jews from Theresienstadt with a stop in Haderslev.",
+        "caption": "Transport of Danish Jews from Theresienstadt Ghetto with a stop in Haderslev.",
         "copyright": " The Museum of Danish Resistance (Frihedsmuseet)."
       }
     ],
@@ -541,17 +604,14 @@
       "lineString": {
         "type": "LineString",
         "coordinates": [
-          [9.357836625726323, 54.834964114161025],
-          [9.423158328808753, 55.49948926731361],
-          [9.674283986793146, 55.54057792253558],
-          [10.346371728345495, 55.36029178981294],
-          [10.525643508897065, 55.36400459254174],
-          [10.807252628255284, 55.31116752595358],
-          [11.560629600770032, 55.4604152921538],
-          [12.15650868699833, 55.48221923684352],
-          [12.421424480899944, 55.629183065963964],
-          [12.663840578491813, 55.63532877545892],
-          [13.005690820691154, 55.60172045887723]
+          [9.354836649141978, 54.83094454398937],
+          [9.465975047232243, 55.49938378812497],
+          [10.406418974332508, 55.39416507661302],
+          [10.799288475070174, 55.31579512167248],
+          [11.791072907307528, 55.44301796447212],
+          [12.086203113267647, 55.641885987499094],
+          [12.598536276851537, 55.67736841477478],
+          [13.009103222082418, 55.6019626055596]
         ]
       }
     }
@@ -560,7 +620,7 @@
     "title": "After Theresienstadt",
     "shorttitle": "After",
     "subtitle": "The Return to Odense",
-    "text": "On 5 May 1945, just two weeks after their arrival in Sweden, the war ended and Denmark was liberated. The day is still celebrated in Denmark as Liberation Day, and it also happened to be Steen’s tenth birthday. Steen and his mother returned to Odense in early June. Back home, Steen joked to his school friends that they had raised the Danish flags in honour of his birthday. Coming home marked rebuilding a normal life while being confronted with what had been lost during their time in Theresienstadt. Their apartment had been rented out due to a housing shortage, but their personal belongings had been kept safe by his father's former workplace. Friends took them in and gave them a warm welcome, and, in time, they found an apartment in Stovesberg again.",
+    "text": "On 5 May 1945, just two weeks after their arrival in Sweden, the war ended and Denmark was liberated. The day is still celebrated in Denmark as Liberation Day, and it also happened to be Steen’s tenth birthday. Steen and his mother returned to Odense in early June. Back home, Steen joked to his school friends that they had raised the Danish flags in honour of his birthday. Coming home marked rebuilding a normal life while being confronted with what had been lost during their time in the Theresienstadt Ghetto. Their apartment had been rented out due to a housing shortage, but their personal belongings had been kept safe by his father's former workplace. Friends took them in and gave them a warm welcome, and, in time, they found an apartment in Stovesberg again.",
     "location": "Odense, Denmark",
     "time": "1945 - 2008",
     "map": {
